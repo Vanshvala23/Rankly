@@ -11,7 +11,11 @@ const accountsFile = path.join(dataDirectory, 'accounts.json');
 const auditsFile = path.join(dataDirectory, 'audits.json');
 
 app.use(express.json({ limit: '20kb' }));
-app.use(express.static(__dirname));
+const siteDirectory = path.dirname(__filename);
+app.use(express.static(siteDirectory));
+app.get('/', (_request, response) => {
+  response.sendFile(path.join(siteDirectory, 'index.html'));
+});
 
 async function readCollection(file) {
   try {
