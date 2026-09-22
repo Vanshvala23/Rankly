@@ -48,10 +48,15 @@ const restoreSession = async () => {
 };
 const apiRequest = async (url, options = {}) => {
   const token = localStorage.getItem('ranklyToken');
-  const response = await fetch(url, {
-    ...options,
-    headers: { 'Content-Type': 'application/json', ...(token ? { Authorization: `Bearer ${token}` } : {}), ...options.headers }
-  });
+  let response;
+  try {
+    response = await fetch(url, {
+      ...options,
+      headers: { 'Content-Type': 'application/json', ...(token ? { Authorization: `Bearer ${token}` } : {}), ...options.headers }
+    });
+  } catch {
+    throw new Error('Unable to connect to the server. Please try again.');
+  }
   const contentType = response.headers.get('content-type') || '';
   if (!contentType.includes('application/json')) {
     throw new Error('The API is not connected. Deploy the Netlify Function and try again.');

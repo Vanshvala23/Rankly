@@ -6,7 +6,7 @@ const path = require('node:path');
 const app = express();
 const port = Number(process.env.PORT || 3000);
 const secret = process.env.SESSION_SECRET || 'replace-this-session-secret-in-production';
-const dataDirectory = path.join(__dirname, 'data');
+const dataDirectory = process.env.NETLIFY ? path.join('/tmp', 'rankly-data') : path.join(__dirname, 'data');
 const accountsFile = path.join(dataDirectory, 'accounts.json');
 const auditsFile = path.join(dataDirectory, 'audits.json');
 
@@ -117,6 +117,15 @@ app.post('/api/audits', async (request, response) => {
   audits.push({ id: crypto.randomUUID(), email: email.trim().toLowerCase(), createdAt: new Date().toISOString() });
   await writeCollection(auditsFile, audits);
   return response.status(201).json({ message: 'Your free SEO audit request has been received.' });
+});
+
+app.use('/api', (_request, response) => {
+  response.status(404).json({ message: 'API route not found.' });
+});
+
+app.use((error, _request, response, _next) => {
+  console.error(error);
+  response.status(500).json({ message: 'The server could not complete that request.' });
 });
 
 if (require.main === module) {

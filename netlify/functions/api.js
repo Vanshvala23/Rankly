@@ -4,11 +4,15 @@ const app = require('../../server');
 const handler = serverless(app);
 
 module.exports.handler = (event, context) => {
-  if (!event.path.startsWith('/api')) {
-    event.path = `/api${event.path}`;
-  }
-  if (event.rawUrl) {
-    event.rawUrl = event.rawUrl.replace('/.netlify/functions/api', '');
-  }
+  const functionPrefix = '/.netlify/functions/api';
+  const requestPath = event.path || event.rawPath || '/';
+  const pathWithoutFunctionPrefix = requestPath.startsWith(functionPrefix)
+    ? requestPath.slice(functionPrefix.length) || '/'
+    : requestPath;
+  event.path = pathWithoutFunctionPrefix.startsWith('/api')
+    ? pathWithoutFunctionPrefix
+    : `/api${pathWithoutFunctionPrefix}`;
+  event.rawPath = event.path;
+  event.rawUrl = event.rawUrl?.replace(functionPrefix, '') || event.path;
   return handler(event, context);
 };
