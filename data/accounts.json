@@ -1,0 +1,9 @@
+[
+  {
+    "id": "9a933c8a-7fcc-4fc1-b4aa-b9e4b0ca7645",
+    "name": "John Doe",
+    "email": "johndoe@gmail.com",
+    "passwordHash": "8a90ff0b3a2b91624c22fdff1e8472fd:a5457edee7af6f0021be7c738b996bd226d36204c78e855276e2e225d1256b78c3bee45be7c90f9f5ddd14c0cffd7410f278ae9fea7010046b21454468283a6b",
+    "createdAt": "2026-09-22T14:15:15.298Z"
+  }
+]
