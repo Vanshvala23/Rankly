@@ -1,4 +1,5 @@
 const serverless = require('serverless-http');
+process.env.NETLIFY = 'true';
 const app = require('../../server');
 
 const handler = serverless(app);

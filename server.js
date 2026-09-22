@@ -1,14 +1,11 @@
 const express = require('express');
 const crypto = require('node:crypto');
-const fs = require('node:fs/promises');
 const path = require('node:path');
+const { Account, Audit, connectDatabase } = require('./models');
 
 const app = express();
 const port = Number(process.env.PORT || 3000);
-const secret = process.env.SESSION_SECRET || 'replace-this-session-secret-in-production';
-const dataDirectory = process.env.NETLIFY ? path.join('/tmp', 'rankly-data') : path.join(__dirname, 'data');
-const accountsFile = path.join(dataDirectory, 'accounts.json');
-const auditsFile = path.join(dataDirectory, 'audits.json');
+const secret = process.env.SESSION_SECRET;
 
 app.use(express.json({ limit: '20kb' }));
 const siteDirectory = path.dirname(__filename);
@@ -16,20 +13,6 @@ app.use(express.static(siteDirectory));
 app.get('/', (_request, response) => {
   response.sendFile(path.join(siteDirectory, 'index.html'));
 });
-
-async function readCollection(file) {
-  try {
-    return JSON.parse(await fs.readFile(file, 'utf8'));
-  } catch (error) {
-    if (error.code !== 'ENOENT') throw error;
-    return [];
-  }
-}
-
-async function writeCollection(file, collection) {
-  await fs.mkdir(dataDirectory, { recursive: true });
-  await fs.writeFile(file, JSON.stringify(collection, null, 2));
-}
 
 function hashPassword(password, salt = crypto.randomBytes(16).toString('hex')) {
   return new Promise((resolve, reject) => {
@@ -51,6 +34,7 @@ function verifyPassword(password, storedHash) {
 }
 
 function createSession(account) {
+  if (!secret) throw new Error('SESSION_SECRET is not configured.');
   const payload = Buffer.from(JSON.stringify({
     id: account.id,
     email: account.email,
@@ -76,25 +60,25 @@ function readSession(request) {
 }
 
 app.post('/api/auth/register', async (request, response) => {
-  const { name, email, password } = request.body;
-  if (!name?.trim() || !email?.trim() || typeof password !== 'string' || password.length < 6) {
-    return response.status(400).json({ message: 'Name, a valid email, and a password of at least 6 characters are required.' });
+  try {
+    const { name, email, password } = request.body;
+    if (!name?.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email || '') || typeof password !== 'string' || password.length < 6) {
+      return response.status(400).json({ message: 'Name, a valid email, and a password of at least 6 characters are required.' });
+    }
+    await connectDatabase();
+    const normalizedEmail = email.trim().toLowerCase();
+    const account = await Account.create({ name: name.trim(), email: normalizedEmail, passwordHash: await hashPassword(password) });
+    return response.status(201).json({ user: { name: account.name, email: account.email }, token: createSession(account) });
+  } catch (error) {
+    if (error.code === 11000) return response.status(409).json({ message: 'An account with that email already exists.' });
+    throw error;
   }
-  const accounts = await readCollection(accountsFile);
-  const normalizedEmail = email.trim().toLowerCase();
-  if (accounts.some((account) => account.email === normalizedEmail)) {
-    return response.status(409).json({ message: 'An account with that email already exists.' });
-  }
-  const account = { id: crypto.randomUUID(), name: name.trim(), email: normalizedEmail, passwordHash: await hashPassword(password), createdAt: new Date().toISOString() };
-  accounts.push(account);
-  await writeCollection(accountsFile, accounts);
-  return response.status(201).json({ user: { name: account.name, email: account.email }, token: createSession(account) });
 });
 
 app.post('/api/auth/login', async (request, response) => {
   const { email, password } = request.body;
-  const accounts = await readCollection(accountsFile);
-  const account = accounts.find((item) => item.email === email?.trim().toLowerCase());
+  await connectDatabase();
+  const account = await Account.findOne({ email: email?.trim().toLowerCase() }).select('+passwordHash');
   if (!account || typeof password !== 'string' || !(await verifyPassword(password, account.passwordHash))) {
     return response.status(401).json({ message: 'Email or password is incorrect.' });
   }
@@ -104,8 +88,8 @@ app.post('/api/auth/login', async (request, response) => {
 app.get('/api/auth/me', async (request, response) => {
   const session = readSession(request);
   if (!session) return response.status(401).json({ message: 'Your session has expired.' });
-  const accounts = await readCollection(accountsFile);
-  const account = accounts.find((item) => item.id === session.id);
+  await connectDatabase();
+  const account = await Account.findById(session.id);
   if (!account) return response.status(401).json({ message: 'Account not found.' });
   return response.json({ user: { name: account.name, email: account.email } });
 });
@@ -113,9 +97,8 @@ app.get('/api/auth/me', async (request, response) => {
 app.post('/api/audits', async (request, response) => {
   const { email } = request.body;
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email || '')) return response.status(400).json({ message: 'Please enter a valid email address.' });
-  const audits = await readCollection(auditsFile);
-  audits.push({ id: crypto.randomUUID(), email: email.trim().toLowerCase(), createdAt: new Date().toISOString() });
-  await writeCollection(auditsFile, audits);
+  await connectDatabase();
+  await Audit.create({ email: email.trim().toLowerCase() });
   return response.status(201).json({ message: 'Your free SEO audit request has been received.' });
 });
 
