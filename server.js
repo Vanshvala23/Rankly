@@ -115,4 +115,8 @@ app.post('/api/audits', async (request, response) => {
   return response.status(201).json({ message: 'Your free SEO audit request has been received.' });
 });
 
-app.listen(port, () => console.log(`Rankly is running at http://localhost:${port}`));
+if (require.main === module) {
+  app.listen(port, () => console.log(`Rankly is running at http://localhost:${port}`));
+}
+
+module.exports = app;
