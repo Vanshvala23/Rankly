@@ -22,6 +22,7 @@ const asyncHandler = (handler) => (request, response, next) => {
 };
 
 const publicAddress = (address) => {
+  if (typeof address !== 'string' || !address.trim()) return false;
   try {
     const parsed = ipaddr.process(address);
     return parsed.range() === 'unicast';
@@ -37,7 +38,7 @@ async function resolvePublicHost(hostname) {
   } catch {
     throw new Error('The website host could not be resolved.');
   }
-  if (!addresses.length || addresses.some(({ address }) => !publicAddress(address))) {
+  if (!addresses.length || addresses.some(({ address, family }) => !publicAddress(address) || net.isIP(address) !== family)) {
     throw new Error('This address is not a publicly reachable website.');
   }
   return addresses[0];
@@ -58,7 +59,11 @@ async function fetchPageHtml(input, redirects = 0) {
       protocol: 'https:', hostname: url.hostname, port: 443,
       path: `${url.pathname}${url.search}`, method: 'GET', servername: url.hostname,
       headers: { 'User-Agent': 'RanklySEOChecker/1.0', Accept: 'text/html', 'Accept-Encoding': 'identity' },
-      lookup: (_hostname, _options, callback) => callback(null, address.address, address.family)
+      lookup: (_hostname, options, callback) => {
+        if (!address?.address || ![4, 6].includes(address.family)) return callback(new Error('The website host did not resolve to a usable IP address.'));
+        if (options?.all) return callback(null, [{ address: address.address, family: address.family }]);
+        return callback(null, address.address, address.family);
+      }
     }, (res) => {
       if ([301, 302, 303, 307, 308].includes(res.statusCode) && res.headers.location) {
         res.resume();
