@@ -106,13 +106,15 @@
 
     <section class="section seo-tool-section" id="seo-checker">
       <div class="container seo-tool-layout">
-        <div class="section-intro"><div class="eyebrow"><span class="eyebrow-line"></span> Free SEO tool</div><h2>Make every page<br><em>search ready.</em></h2><p>Check a draft before you publish. Get an instant on-page score, clear fixes, and a live search snippet preview. Your text stays in your browser.</p><div class="tool-note"><span>✓</span> Free to use · No account required · Updates as you type</div></div>
+        <div class="section-intro"><div class="eyebrow"><span class="eyebrow-line"></span> Free SEO tool</div><h2>Make every page<br><em>search ready.</em></h2><p>Check a draft before you publish for an instant score, clear fixes, and a live search snippet preview. Paste your content for private in-browser checks, or load a public page by URL.</p><div class="tool-note"><span>✓</span> Free to use · No account required · Updates as you type</div></div>
         <form class="seo-checker" id="seo-checker-form">
           <div class="checker-fields">
             <label>Page title <span class="field-count" id="title-count">0 / 60</span><input id="page-title" maxlength="120" placeholder="A clear, compelling page title"></label>
             <label>Meta description <span class="field-count" id="description-count">0 / 160</span><textarea id="page-description" rows="3" maxlength="320" placeholder="Summarize the page and give people a reason to click"></textarea></label>
             <label>Target keyword<input id="target-keyword" placeholder="e.g. sustainable running shoes"></label>
             <label>Page URL<input id="page-url" type="url" placeholder="https://example.com/your-page"></label>
+            <button class="button analyze-page-button" id="analyze-page" type="button">Analyze live page <span aria-hidden="true">↗</span></button>
+            <small class="analyze-message" id="analyze-message" aria-live="polite">Enter a public HTTPS page URL to load its current title, description, and text.</small>
             <label>Page content<textarea id="page-content" rows="7" placeholder="Paste your article or landing page copy here…"></textarea></label>
           </div>
           <div class="checker-results" aria-live="polite">

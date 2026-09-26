@@ -1,6 +1,10 @@
 const express = require('express');
 const crypto = require('node:crypto');
+const dns = require('node:dns').promises;
+const https = require('node:https');
+const net = require('node:net');
 const path = require('node:path');
+const ipaddr = require('ipaddr.js');
 const { Account, Audit, connectDatabase } = require('./models');
 
 const app = express();
@@ -16,6 +20,119 @@ app.get('/', (_request, response) => {
 const asyncHandler = (handler) => (request, response, next) => {
   Promise.resolve(handler(request, response, next)).catch(next);
 };
+
+const publicAddress = (address) => {
+  try {
+    const parsed = ipaddr.process(address);
+    return parsed.range() === 'unicast';
+  } catch {
+    return false;
+  }
+};
+
+async function resolvePublicHost(hostname) {
+  let addresses;
+  try {
+    addresses = await dns.lookup(hostname, { all: true, verbatim: true });
+  } catch {
+    throw new Error('The website host could not be resolved.');
+  }
+  if (!addresses.length || addresses.some(({ address }) => !publicAddress(address))) {
+    throw new Error('This address is not a publicly reachable website.');
+  }
+  return addresses[0];
+}
+
+async function fetchPageHtml(input, redirects = 0) {
+  let url;
+  try { url = new URL(input); } catch { throw new Error('Enter a valid website URL.'); }
+  if (url.protocol !== 'https:' || url.username || url.password || (url.port && url.port !== '443')) {
+    throw new Error('Use a public HTTPS URL on the standard web port.');
+  }
+  if (net.isIP(url.hostname) && !publicAddress(url.hostname)) {
+    throw new Error('This address is not a publicly reachable website.');
+  }
+  const address = await resolvePublicHost(url.hostname);
+  const result = await new Promise((resolve, reject) => {
+    const req = https.request({
+      protocol: 'https:', hostname: url.hostname, port: 443,
+      path: `${url.pathname}${url.search}`, method: 'GET', servername: url.hostname,
+      headers: { 'User-Agent': 'RanklySEOChecker/1.0', Accept: 'text/html', 'Accept-Encoding': 'identity' },
+      lookup: (_hostname, _options, callback) => callback(null, address.address, address.family)
+    }, (res) => {
+      if ([301, 302, 303, 307, 308].includes(res.statusCode) && res.headers.location) {
+        res.resume();
+        try { resolve({ redirect: new URL(res.headers.location, url).toString() }); }
+        catch { reject(new Error('The website returned an invalid redirect.')); }
+        return;
+      }
+      if (res.statusCode < 200 || res.statusCode >= 300) {
+        res.resume();
+        reject(new Error(`The website returned HTTP ${res.statusCode}.`));
+        return;
+      }
+      const contentType = (res.headers['content-type'] || '').toLowerCase();
+      if (!contentType.includes('text/html') && !contentType.includes('application/xhtml+xml')) {
+        res.resume();
+        reject(new Error('That URL did not return an HTML page.'));
+        return;
+      }
+      const chunks = [];
+      let size = 0;
+      res.on('data', (chunk) => {
+        size += chunk.length;
+        if (size > 1_000_000) {
+          req.destroy(new Error('The page is larger than the 1 MB analysis limit.'));
+          return;
+        }
+        chunks.push(chunk);
+      });
+      res.on('end', () => resolve({ html: Buffer.concat(chunks).toString('utf8'), finalUrl: url.toString() }));
+      res.on('error', reject);
+    });
+    req.setTimeout(8000, () => req.destroy(new Error('The website took too long to respond.')));
+    req.on('error', reject);
+    req.end();
+  });
+  if (result.redirect) {
+    if (redirects >= 3) throw new Error('The page redirected too many times.');
+    return fetchPageHtml(result.redirect, redirects + 1);
+  }
+  return result;
+}
+
+function decodeHtmlEntities(text) {
+  const named = { amp: '&', apos: "'", quot: '"', lt: '<', gt: '>', nbsp: ' ' };
+  return text.replace(/&(#x[\da-f]+|#\d+|amp|apos|quot|lt|gt|nbsp);/gi, (match, entity) => {
+    if (entity[0] === '#') {
+      const number = entity[1].toLowerCase() === 'x' ? parseInt(entity.slice(2), 16) : parseInt(entity.slice(1), 10);
+      try { return String.fromCodePoint(number); } catch { return match; }
+    }
+    return named[entity.toLowerCase()] || match;
+  });
+}
+
+function extractPageDetails(html) {
+  const getText = (value) => decodeHtmlEntities(value.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim());
+  const title = getText((html.match(/<title\b[^>]*>([\s\S]*?)<\/title\s*>/i) || [])[1] || '');
+  let description = '';
+  for (const tag of html.match(/<meta\b[^>]*>/gi) || []) {
+    const attributes = Object.fromEntries([...tag.matchAll(/([\w:-]+)\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s/>]+))/g)].map((match) => [match[1].toLowerCase(), match[2] ?? match[3] ?? match[4] ?? '']));
+    if (attributes.name?.toLowerCase() === 'description' || attributes.property?.toLowerCase() === 'og:description') {
+      description = decodeHtmlEntities(attributes.content || '').trim();
+      if (description) break;
+    }
+  }
+  let content = html
+    .replace(/<!--[\s\S]*?-->/g, ' ')
+    .replace(/<(script|style|noscript|svg|template)\b[^>]*>[\s\S]*?<\/\1\s*>/gi, ' ')
+    .replace(/<h([1-6])\b[^>]*>([\s\S]*?)<\/h\1\s*>/gi, (_match, level, heading) => `\n${'#'.repeat(Number(level))} ${getText(heading)}\n`)
+    .replace(/<\/(p|div|li|section|article|header|footer|tr|blockquote)\s*>/gi, '\n')
+    .replace(/<br\s*\/?\s*>/gi, '\n')
+    .replace(/<[^>]*>/g, ' ');
+  content = decodeHtmlEntities(content).replace(/[\t\f\r ]+/g, ' ').replace(/ *\n */g, '\n').replace(/\n{3,}/g, '\n\n').trim().slice(0, 30000);
+  return { title, description, content };
+}
 
 function hashPassword(password, salt = crypto.randomBytes(16).toString('hex')) {
   return new Promise((resolve, reject) => {
@@ -103,6 +220,17 @@ app.post('/api/audits', asyncHandler(async (request, response) => {
   await connectDatabase();
   await Audit.create({ email: email.trim().toLowerCase() });
   return response.status(201).json({ message: 'Your free SEO audit request has been received.' });
+}));
+
+app.post('/api/page-audit', asyncHandler(async (request, response) => {
+  const pageUrl = typeof request.body.url === 'string' ? request.body.url.trim() : '';
+  if (!pageUrl) return response.status(400).json({ message: 'Enter a page URL to analyze.' });
+  try {
+    const page = await fetchPageHtml(pageUrl);
+    return response.json({ ...extractPageDetails(page.html), url: page.finalUrl });
+  } catch (error) {
+    return response.status(400).json({ message: error.message || 'Could not analyze that page.' });
+  }
 }));
 
 app.use('/api', (_request, response) => {

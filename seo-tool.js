@@ -9,6 +9,8 @@
   const checks = document.querySelector('#seo-check-list');
   const scoreOutput = document.querySelector('#seo-score');
   const summary = document.querySelector('#score-summary');
+  const analyzeButton = document.querySelector('#analyze-page');
+  const analyzeMessage = document.querySelector('#analyze-message');
   if (!checks || !scoreOutput) return;
 
   const wordCount = (text) => (text.trim().match(/\b[\p{L}\p{N}][\p{L}\p{N}'’-]*\b/gu) || []).length;
@@ -56,6 +58,38 @@
       return li;
     }));
   };
+  analyzeButton.addEventListener('click', async () => {
+    if (!fields.url.checkValidity() || !fields.url.value.trim()) {
+      analyzeMessage.textContent = 'Enter a valid public HTTPS URL first.';
+      fields.url.focus();
+      return;
+    }
+    analyzeButton.disabled = true;
+    analyzeButton.textContent = 'Fetching page…';
+    analyzeMessage.textContent = 'Loading the live page and checking its HTML…';
+    try {
+      const response = await fetch('/api/page-audit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ url: fields.url.value.trim() })
+      });
+      const data = await response.json();
+      if (!response.ok) throw new Error(data.message || 'Could not analyze that page.');
+      fields.url.value = data.url;
+      fields.title.value = data.title;
+      fields.description.value = data.description;
+      fields.content.value = data.content;
+      analyzeMessage.textContent = data.title
+        ? 'Page loaded. Add a target keyword to complete the on-page checks.'
+        : 'Page loaded, but it has no HTML title. Add one to improve the score.';
+      render();
+    } catch (error) {
+      analyzeMessage.textContent = error.message || 'Could not analyze that page. You can still paste the page details manually.';
+    } finally {
+      analyzeButton.disabled = false;
+      analyzeButton.innerHTML = 'Analyze live page <span aria-hidden="true">↗</span>';
+    }
+  });
   document.querySelector('#seo-checker-form').addEventListener('submit', (event) => event.preventDefault());
   Object.values(fields).forEach((field) => field.addEventListener('input', render));
   render();
