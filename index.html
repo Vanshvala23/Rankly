@@ -29,6 +29,7 @@
       </button>
       <div class="nav-links" id="nav-links">
         <a href="#features">Product</a>
+        <a href="#seo-checker">SEO tools</a>
         <a href="#how-it-works">How it works</a>
         <a href="#stories">Customers</a>
         <a href="#pricing">Pricing</a>
@@ -103,6 +104,26 @@
       </div>
     </section>
 
+    <section class="section seo-tool-section" id="seo-checker">
+      <div class="container seo-tool-layout">
+        <div class="section-intro"><div class="eyebrow"><span class="eyebrow-line"></span> Free SEO tool</div><h2>Make every page<br><em>search ready.</em></h2><p>Check a draft before you publish. Get an instant on-page score, clear fixes, and a live search snippet preview. Your text stays in your browser.</p><div class="tool-note"><span>✓</span> Free to use · No account required · Updates as you type</div></div>
+        <form class="seo-checker" id="seo-checker-form">
+          <div class="checker-fields">
+            <label>Page title <span class="field-count" id="title-count">0 / 60</span><input id="page-title" maxlength="120" placeholder="A clear, compelling page title"></label>
+            <label>Meta description <span class="field-count" id="description-count">0 / 160</span><textarea id="page-description" rows="3" maxlength="320" placeholder="Summarize the page and give people a reason to click"></textarea></label>
+            <label>Target keyword<input id="target-keyword" placeholder="e.g. sustainable running shoes"></label>
+            <label>Page URL<input id="page-url" type="url" placeholder="https://example.com/your-page"></label>
+            <label>Page content<textarea id="page-content" rows="7" placeholder="Paste your article or landing page copy here…"></textarea></label>
+          </div>
+          <div class="checker-results" aria-live="polite">
+            <div class="score-display"><span class="score-ring" id="seo-score">0</span><div><strong>On-page score</strong><small id="score-summary">Add page details to get started</small></div></div>
+            <ul class="check-list" id="seo-check-list"><li>Enter your page details to see recommendations.</li></ul>
+            <div class="snippet-preview"><small>GOOGLE SEARCH PREVIEW</small><strong id="snippet-title">Your page title will appear here</strong><span id="snippet-url">example.com › your-page</span><p id="snippet-description">Your meta description preview will appear here.</p></div>
+          </div>
+        </form>
+      </div>
+    </section>
+
     <section class="section workflow-section" id="how-it-works">
       <div class="container workflow"><div class="workflow-copy"><div class="eyebrow"><span class="eyebrow-line"></span> Your growth, in focus</div><h2>Stop guessing.<br><em>Start growing.</em></h2><p>Rankly replaces scattered spreadsheets and stale reports with a simple, living roadmap to better rankings.</p><a class="button" href="#contact">Build your roadmap <span>↗</span></a></div><div class="steps"><div class="step"><span class="step-number">01</span><div><h3>Find your opportunity</h3><p>Uncover the keywords and topics where you can win fastest.</p></div><span class="step-arrow">↗</span></div><div class="step"><span class="step-number">02</span><div><h3>Make your move</h3><p>Get clear briefs and recommendations to create content that ranks.</p></div><span class="step-arrow">↗</span></div><div class="step"><span class="step-number">03</span><div><h3>Watch it compound</h3><p>Track your progress and turn every win into the next one.</p></div><span class="step-arrow">↗</span></div></div></div>
     </section>
@@ -170,5 +191,6 @@
 
   <footer class="footer"><div class="container footer-inner"><a class="logo" href="#"><span class="logo-mark"><span></span><span></span><span></span></span>rankly<span class="logo-period">.</span></a><span>© 2024 Rankly, Inc.</span><div><a href="#features">Product</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div></div></footer>
   <script src="script.js"></script>
+  <script src="seo-tool.js"></script>
 </body>
 </html>

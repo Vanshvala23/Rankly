@@ -13,6 +13,9 @@ app.use(express.static(siteDirectory));
 app.get('/', (_request, response) => {
   response.sendFile(path.join(siteDirectory, 'index.html'));
 });
+const asyncHandler = (handler) => (request, response, next) => {
+  Promise.resolve(handler(request, response, next)).catch(next);
+};
 
 function hashPassword(password, salt = crypto.randomBytes(16).toString('hex')) {
   return new Promise((resolve, reject) => {
@@ -59,7 +62,7 @@ function readSession(request) {
   }
 }
 
-app.post('/api/auth/register', async (request, response) => {
+app.post('/api/auth/register', asyncHandler(async (request, response) => {
   try {
     const { name, email, password } = request.body;
     if (!name?.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email || '') || typeof password !== 'string' || password.length < 6) {
@@ -73,9 +76,9 @@ app.post('/api/auth/register', async (request, response) => {
     if (error.code === 11000) return response.status(409).json({ message: 'An account with that email already exists.' });
     throw error;
   }
-});
+}));
 
-app.post('/api/auth/login', async (request, response) => {
+app.post('/api/auth/login', asyncHandler(async (request, response) => {
   const { email, password } = request.body;
   await connectDatabase();
   const account = await Account.findOne({ email: email?.trim().toLowerCase() }).select('+passwordHash');
@@ -83,24 +86,24 @@ app.post('/api/auth/login', async (request, response) => {
     return response.status(401).json({ message: 'Email or password is incorrect.' });
   }
   return response.json({ user: { name: account.name, email: account.email }, token: createSession(account) });
-});
+}));
 
-app.get('/api/auth/me', async (request, response) => {
+app.get('/api/auth/me', asyncHandler(async (request, response) => {
   const session = readSession(request);
   if (!session) return response.status(401).json({ message: 'Your session has expired.' });
   await connectDatabase();
   const account = await Account.findById(session.id);
   if (!account) return response.status(401).json({ message: 'Account not found.' });
   return response.json({ user: { name: account.name, email: account.email } });
-});
+}));
 
-app.post('/api/audits', async (request, response) => {
+app.post('/api/audits', asyncHandler(async (request, response) => {
   const { email } = request.body;
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email || '')) return response.status(400).json({ message: 'Please enter a valid email address.' });
   await connectDatabase();
   await Audit.create({ email: email.trim().toLowerCase() });
   return response.status(201).json({ message: 'Your free SEO audit request has been received.' });
-});
+}));
 
 app.use('/api', (_request, response) => {
   response.status(404).json({ message: 'API route not found.' });
