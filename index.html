@@ -1,198 +1,1277 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Rankly helps ambitious teams turn search visibility into predictable growth with simple SEO workflows.">
-  <meta name="theme-color" content="#f8fafc">
-  <title>Rankly — Make search your best growth channel</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <!-- ═══════════════════════════════════════════
+       CORE META TAGS
+  ═══════════════════════════════════════════ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Rankly — AI-Powered SEO Platform That Grows Your Organic Traffic</title>
+  <meta name="description" content="Rankly is the all-in-one SEO SaaS platform that audits your pages, tracks rankings, automates reporting, and grows organic traffic by an average of 128%. Start free today." />
+  <meta name="keywords" content="SEO tool, rank tracker, keyword research, site audit, content optimization, SEO SaaS, organic traffic, Rankly" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="author" content="Rankly Technologies Inc." />
+  <link rel="canonical" href="https://www.rankly.io/" />
+
+  <!-- ═══════════════════════════════════════════
+       OPEN GRAPH
+  ═══════════════════════════════════════════ -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Rankly" />
+  <meta property="og:title" content="Rankly — AI-Powered SEO Platform That Grows Your Organic Traffic" />
+  <meta property="og:description" content="Audit pages, track rankings, automate reporting, and grow organic traffic by an average of 128%. Try Rankly free — no credit card required." />
+  <meta property="og:url" content="https://www.rankly.io/" />
+  <meta property="og:image" content="https://www.rankly.io/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- ═══════════════════════════════════════════
+       TWITTER CARD
+  ═══════════════════════════════════════════ -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@RanklyHQ" />
+  <meta name="twitter:creator" content="@RanklyHQ" />
+  <meta name="twitter:title" content="Rankly — AI-Powered SEO Platform That Grows Your Organic Traffic" />
+  <meta name="twitter:description" content="Audit pages, track rankings, automate reporting, and grow organic traffic by an average of 128%. Try Rankly free — no credit card required." />
+  <meta name="twitter:image" content="https://www.rankly.io/assets/twitter-card.png" />
+
+  <!-- ═══════════════════════════════════════════
+       PERFORMANCE HINTS
+  ═══════════════════════════════════════════ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- ═══════════════════════════════════════════
+       STYLESHEET
+  ═══════════════════════════════════════════ -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- ═══════════════════════════════════════════
+       SCHEMA.ORG JSON-LD
+  ═══════════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.rankly.io/#organization",
+        "name": "Rankly",
+        "url": "https://www.rankly.io/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.rankly.io/assets/logo.svg",
+          "width": 140,
+          "height": 40
+        },
+        "sameAs": [
+          "https://twitter.com/RanklyHQ",
+          "https://linkedin.com/company/rankly",
+          "https://github.com/rankly"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "email": "support@rankly.io",
+          "availableLanguage": "English"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.rankly.io/#website",
+        "url": "https://www.rankly.io/",
+        "name": "Rankly",
+        "description": "AI-Powered SEO Platform That Grows Your Organic Traffic",
+        "publisher": { "@id": "https://www.rankly.io/#organization" },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.rankly.io/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Rankly",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "url": "https://www.rankly.io/",
+        "description": "Rankly is an AI-powered SEO SaaS platform for rank tracking, site auditing, content optimization, and automated reporting.",
+        "screenshot": "https://www.rankly.io/assets/dashboard-screenshot.png",
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Starter Plan",
+            "price": "29.00",
+            "priceCurrency": "USD",
+            "priceSpecification": {
+              "@type": "RecurringCharge",
+              "billingPeriod": "P1M"
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Growth Plan",
+            "price": "79.00",
+            "priceCurrency": "USD",
+            "priceSpecification": {
+              "@type": "RecurringCharge",
+              "billingPeriod": "P1M"
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Agency Plan",
+            "price": "199.00",
+            "priceCurrency": "USD",
+            "priceSpecification": {
+              "@type": "RecurringCharge",
+              "billingPeriod": "P1M"
+            }
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "2847",
+          "bestRating": "5"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is there a free trial for Rankly?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Every plan includes a 14-day free trial with full feature access — no credit card required."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does Rankly's on-page SEO checker work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Enter your page URL and target keyword. Rankly fetches the live page, analyses 60+ on-page factors including title tags, meta descriptions, heading hierarchy, content depth, Core Web Vitals, and schema markup, then returns a prioritised action list."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I track keywords for multiple websites?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely. All plans support multiple projects. The Starter plan includes up to 3 projects, Growth supports up to 15, and Agency is unlimited."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Rankly integrate with Google Search Console and Analytics?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Rankly natively integrates with Google Search Console, Google Analytics 4, and dozens of other tools including Ahrefs, SEMrush, Slack, and HubSpot."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What kind of support is available?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Starter users get email support. Growth users get priority email and live chat. Agency users get a dedicated account manager with SLA-backed response times."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
+
 <body>
-  <div class="announcement">
-    <span class="announcement-dot"></span>
-    <span>Rankly 2.0 is here — see what's new</span>
-    <a href="#features">Explore features <span aria-hidden="true">↗</span></a>
+
+  <!-- ╔══════════════════════════════════════════╗
+       ║  ANNOUNCEMENT BAR                       ║
+       ╚══════════════════════════════════════════╝ -->
+  <div class="announcement-bar" role="banner" aria-label="Product announcement">
+    <span class="announcement-badge">NEW</span>
+    <p>
+      Rankly 2.0 is here — AI content briefs, real-time SERP monitoring &amp; 3× faster audits.
+      <a href="#features" class="announcement-link">See what's new <span aria-hidden="true">→</span></a>
+    </p>
+    <button class="announcement-close" aria-label="Dismiss announcement" id="announcementClose">✕</button>
   </div>
 
-  <header class="site-header">
-    <nav class="nav container" aria-label="Main navigation">
-      <a class="logo" href="#" aria-label="Rankly home">
-        <span class="logo-mark"><span></span><span></span><span></span></span>
-        rankly<span class="logo-period">.</span>
+  <!-- ╔══════════════════════════════════════════╗
+       ║  STICKY HEADER / NAV                    ║
+       ╚══════════════════════════════════════════╝ -->
+  <header class="site-header" id="siteHeader" role="banner">
+    <nav class="nav-inner" aria-label="Primary navigation">
+
+      <!-- Logo -->
+      <a href="/" class="nav-logo" aria-label="Rankly — go to homepage">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true" focusable="false">
+          <rect width="32" height="32" rx="8" fill="url(#logoGrad)"/>
+          <path d="M8 22L12 14L16 18L20 10L24 22" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <defs>
+            <linearGradient id="logoGrad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#6366f1"/>
+              <stop offset="1" stop-color="#8b5cf6"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <span class="logo-text">Rankly</span>
       </a>
-      <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">
-        <span></span><span></span>
-      </button>
-      <div class="nav-links" id="nav-links">
-        <a href="#features">Product</a>
-        <a href="#seo-checker">SEO tools</a>
-        <a href="#how-it-works">How it works</a>
-        <a href="#stories">Customers</a>
-        <a href="#pricing">Pricing</a>
-        <a class="nav-login" href="#login" data-auth-login>Log in</a>
-        <a class="button button-small" href="#register" data-auth-register>Start for free <span aria-hidden="true">↗</span></a>
-        <div class="user-menu" hidden>
-          <button class="user-button" type="button" aria-expanded="false" aria-controls="user-dropdown" aria-label="Open account menu">
-            <span class="user-avatar">U</span><span class="user-button-name">Account</span><span class="user-chevron">⌄</span>
+
+      <!-- Primary Nav Links -->
+      <ul class="nav-links" role="list">
+        <li><a href="#features" class="nav-link">Product</a></li>
+        <li><a href="#seo-checker" class="nav-link">SEO Tools</a></li>
+        <li><a href="#how-it-works" class="nav-link">How it works</a></li>
+        <li><a href="#" class="nav-link">Blog</a></li>
+        <li><a href="#pricing" class="nav-link">Pricing</a></li>
+      </ul>
+
+      <!-- CTA + User Menu -->
+      <div class="nav-actions">
+        <button class="btn btn-ghost" id="openLogin" aria-haspopup="dialog">Log in</button>
+        <button class="btn btn-primary" id="openRegister" aria-haspopup="dialog">Get started free</button>
+        <!-- User avatar (shown when logged in via JS) -->
+        <div class="user-menu hidden" id="userMenu" aria-label="User menu" role="navigation">
+          <button class="user-avatar-btn" aria-expanded="false" aria-haspopup="menu" id="userAvatarBtn">
+            <span class="user-initials" id="userInitials">VV</span>
           </button>
-          <div class="user-dropdown" id="user-dropdown" hidden>
-            <div class="user-summary"><span class="user-avatar user-avatar-large">U</span><div><strong class="user-name">Account</strong><small class="user-email">email@example.com</small></div></div>
-            <a href="#contact">Request an audit</a>
-            <button type="button" data-logout>Log out <span>↗</span></button>
-          </div>
+          <ul class="user-dropdown" role="menu" id="userDropdown" hidden>
+            <li role="menuitem"><a href="#">Dashboard</a></li>
+            <li role="menuitem"><a href="#">My Projects</a></li>
+            <li role="menuitem"><a href="#">Billing</a></li>
+            <li role="separator" class="menu-divider"></li>
+            <li role="menuitem"><button id="logoutBtn">Log out</button></li>
+          </ul>
         </div>
       </div>
+
+      <!-- Mobile hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
     </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true" role="dialog" aria-label="Mobile navigation">
+      <ul role="list">
+        <li><a href="#features" class="nav-link">Product</a></li>
+        <li><a href="#seo-checker" class="nav-link">SEO Tools</a></li>
+        <li><a href="#how-it-works" class="nav-link">How it works</a></li>
+        <li><a href="#" class="nav-link">Blog</a></li>
+        <li><a href="#pricing" class="nav-link">Pricing</a></li>
+      </ul>
+      <div class="mobile-menu-actions">
+        <button class="btn btn-ghost btn--full" id="openLoginMobile">Log in</button>
+        <button class="btn btn-primary btn--full" id="openRegisterMobile">Get started free</button>
+      </div>
+    </div>
   </header>
 
-  <main>
-    <section class="hero container">
-      <div class="hero-copy">
-        <div class="eyebrow"><span class="eyebrow-line"></span> SEO that moves the needle</div>
-        <h1>Turn search into your <em>unfair advantage.</em></h1>
-        <p class="hero-description">Rankly gives modern marketing teams the clarity, content, and confidence to win the search results — without the guesswork.</p>
-        <div class="hero-actions">
-          <a class="button" href="#contact">Get your free audit <span aria-hidden="true">↗</span></a>
-          <a class="text-link" href="#how-it-works"><span class="play-icon">▶</span> See how it works</a>
-        </div>
-        <div class="hero-trust">
-          <div class="avatar-stack" aria-hidden="true"><span>JD</span><span>AK</span><span>MR</span><span>+</span></div>
-          <div><strong>4.9/5</strong><span>from 2,000+ growth teams</span></div>
-        </div>
-      </div>
-      <div class="hero-visual" aria-label="Search performance dashboard preview">
-        <div class="glow"></div>
-        <div class="dashboard">
-          <div class="dashboard-top"><span class="window-dots"><i></i><i></i><i></i></span><span class="dashboard-label">Overview <b>⌄</b></span><span class="dashboard-date">Last 30 days&nbsp; ↗</span></div>
-          <div class="metric-row">
-            <div class="metric"><span>Organic traffic</span><strong>84,392</strong><small class="positive">↑ 28.4%</small></div>
-            <div class="metric"><span>Keywords in top 10</span><strong>1,284</strong><small class="positive">↑ 16.2%</small></div>
+  <main id="main-content">
+
+    <!-- ╔══════════════════════════════════════════╗
+         ║  HERO SECTION                           ║
+         ╚══════════════════════════════════════════╝ -->
+    <section class="hero" aria-labelledby="heroHeading">
+      <div class="container hero-grid">
+
+        <!-- Left: Copy -->
+        <div class="hero-copy">
+          <div class="hero-eyebrow">
+            <span class="badge badge--purple">AI-Powered SEO</span>
           </div>
-          <div class="chart-header"><span>Organic performance</span><span class="legend"><i></i>This month&nbsp;&nbsp; <i></i>Last month</span></div>
-          <div class="chart">
-            <div class="chart-y"><span>100k</span><span>75k</span><span>50k</span><span>25k</span><span>0</span></div>
-            <svg viewBox="0 0 520 175" preserveAspectRatio="none" role="img" aria-label="Traffic growing from 40,000 to 84,392 visits">
-              <defs><linearGradient id="area" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#b9f85c" stop-opacity=".35"/><stop offset="1" stop-color="#b9f85c" stop-opacity="0"/></linearGradient></defs>
-              <path d="M0 150 C32 141, 54 146, 77 128 S121 117, 143 125 S183 106, 207 114 S248 91, 270 97 S312 76, 338 84 S374 64, 399 70 S438 31, 464 45 S495 12, 520 18 V175 H0Z" fill="url(#area)"/>
-              <path d="M0 150 C32 141, 54 146, 77 128 S121 117, 143 125 S183 106, 207 114 S248 91, 270 97 S312 76, 338 84 S374 64, 399 70 S438 31, 464 45 S495 12, 520 18" fill="none" stroke="#84c62f" stroke-width="3"/>
-              <circle cx="520" cy="18" r="5" fill="#f8fafc" stroke="#84c62f" stroke-width="3"/>
-            </svg>
-            <div class="chart-x"><span>May 01</span><span>May 08</span><span>May 15</span><span>May 22</span><span>May 30</span></div>
+          <h1 id="heroHeading" class="hero-h1">
+            Rank higher.<br />
+            <span class="gradient-text">Grow faster.</span><br />
+            Win more traffic.
+          </h1>
+          <p class="hero-sub">
+            Rankly combines AI-driven keyword intelligence, real-time rank tracking, and automated
+            reporting to turn your website into an organic traffic machine — without the agency price tag.
+          </p>
+
+          <!-- CTAs -->
+          <div class="hero-ctas">
+            <a href="#contact" class="btn btn-primary btn--lg">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+              Get free audit
+            </a>
+            <a href="#how-it-works" class="btn btn-outline btn--lg">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              See demo
+            </a>
+          </div>
+
+          <!-- Trust indicators -->
+          <div class="trust-row">
+            <div class="avatar-stack" aria-label="Profile pictures of satisfied customers">
+              <div class="avatar-img" style="background:#f97316;" aria-hidden="true">A</div>
+              <div class="avatar-img" style="background:#10b981;" aria-hidden="true">M</div>
+              <div class="avatar-img" style="background:#3b82f6;" aria-hidden="true">S</div>
+              <div class="avatar-img" style="background:#ec4899;" aria-hidden="true">K</div>
+              <div class="avatar-img avatar-count" aria-hidden="true">+2k</div>
+            </div>
+            <div class="trust-text">
+              <div class="stars" aria-label="Rated 4.9 out of 5 stars">
+                <span aria-hidden="true">★★★★★</span>
+              </div>
+              <span>Loved by <strong>2,847+</strong> marketers &amp; founders</span>
+            </div>
           </div>
         </div>
-        <div class="floating-card rank-card"><span class="mini-icon">↗</span><div><strong>#1 position</strong><small>“best seo tools”</small></div><b>+12</b></div>
-        <div class="floating-card score-card"><div class="score">94</div><div><strong>Site health</strong><small>Excellent</small></div></div>
+
+        <!-- Right: Dashboard Mockup -->
+        <div class="hero-visual" aria-hidden="true">
+          <!-- Dashboard Window -->
+          <div class="dashboard-mockup">
+            <div class="mockup-titlebar">
+              <span class="dot dot--red"></span>
+              <span class="dot dot--yellow"></span>
+              <span class="dot dot--green"></span>
+              <span class="mockup-url">rankly.io/dashboard</span>
+            </div>
+            <div class="mockup-body">
+              <div class="mockup-sidebar">
+                <div class="sidebar-item active">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                  Overview
+                </div>
+                <div class="sidebar-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                  Rankings
+                </div>
+                <div class="sidebar-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                  Keywords
+                </div>
+                <div class="sidebar-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg>
+                  Reports
+                </div>
+              </div>
+              <div class="mockup-content">
+                <p class="mockup-label">Organic Traffic · Last 12 months</p>
+                <!-- SVG Chart -->
+                <svg class="chart-svg" viewBox="0 0 340 120" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.35"/>
+                      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+                  <!-- Grid lines -->
+                  <line x1="0" y1="100" x2="340" y2="100" stroke="#e2e8f0" stroke-width="1"/>
+                  <line x1="0" y1="75"  x2="340" y2="75"  stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4,4"/>
+                  <line x1="0" y1="50"  x2="340" y2="50"  stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4,4"/>
+                  <line x1="0" y1="25"  x2="340" y2="25"  stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4,4"/>
+                  <!-- Area fill -->
+                  <path d="M0,95 C30,90 60,85 90,75 C120,65 150,58 180,48 C210,38 240,28 270,18 C300,10 320,8 340,5 L340,100 L0,100 Z" fill="url(#chartGrad)"/>
+                  <!-- Line -->
+                  <path d="M0,95 C30,90 60,85 90,75 C120,65 150,58 180,48 C210,38 240,28 270,18 C300,10 320,8 340,5" fill="none" stroke="#6366f1" stroke-width="2.5" stroke-linecap="round"/>
+                  <!-- Data point -->
+                  <circle cx="340" cy="5" r="4" fill="#6366f1"/>
+                  <circle cx="340" cy="5" r="8" fill="#6366f1" opacity="0.2"/>
+                  <!-- X labels -->
+                  <text x="0"   y="115" font-size="9" fill="#94a3b8">Jan</text>
+                  <text x="56"  y="115" font-size="9" fill="#94a3b8">Mar</text>
+                  <text x="113" y="115" font-size="9" fill="#94a3b8">May</text>
+                  <text x="170" y="115" font-size="9" fill="#94a3b8">Jul</text>
+                  <text x="227" y="115" font-size="9" fill="#94a3b8">Sep</text>
+                  <text x="284" y="115" font-size="9" fill="#94a3b8">Nov</text>
+                  <!-- Y label -->
+                  <text x="0" y="22" font-size="9" fill="#6366f1" font-weight="600">84k</text>
+                </svg>
+                <div class="mockup-stat-row">
+                  <div class="mockup-stat">
+                    <span class="stat-val">84,219</span>
+                    <span class="stat-lbl">Monthly visitors</span>
+                  </div>
+                  <div class="mockup-stat">
+                    <span class="stat-val trend-up">▲ 128%</span>
+                    <span class="stat-lbl">YoY growth</span>
+                  </div>
+                  <div class="mockup-stat">
+                    <span class="stat-val">1,284</span>
+                    <span class="stat-lbl">Keywords ranked</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating card: Rank #1 -->
+          <div class="float-card float-card--rank" role="img" aria-label="Keyword ranked number 1">
+            <div class="float-icon">🏆</div>
+            <div class="float-body">
+              <strong>Rank #1</strong>
+              <span>"best SEO tool 2025"</span>
+            </div>
+          </div>
+
+          <!-- Floating card: Site Health -->
+          <div class="float-card float-card--health" role="img" aria-label="Site health score 94">
+            <div class="health-ring">
+              <svg viewBox="0 0 44 44" width="44" height="44">
+                <circle cx="22" cy="22" r="18" fill="none" stroke="#e2e8f0" stroke-width="4"/>
+                <circle cx="22" cy="22" r="18" fill="none" stroke="#10b981" stroke-width="4"
+                  stroke-dasharray="101.5" stroke-dashoffset="6" stroke-linecap="round"
+                  transform="rotate(-90 22 22)"/>
+                <text x="22" y="26" text-anchor="middle" font-size="11" font-weight="700" fill="#10b981">94</text>
+              </svg>
+            </div>
+            <div class="float-body">
+              <strong>Site Health</strong>
+              <span>Excellent</span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
-    <section class="logo-strip container" aria-label="Trusted by companies">
-      <span>Trusted by teams at</span><div class="client-logos"><b>Northstar</b><b class="logo-serif">MOTION</b><b>horizon<span>.</span></b><b class="logo-light">CO/CREATE</b><b class="logo-serif">Sonder</b></div>
-    </section>
-
-    <section class="section features-section" id="features">
+    <!-- ╔══════════════════════════════════════════╗
+         ║  LOGO STRIP                             ║
+         ╚══════════════════════════════════════════╝ -->
+    <section class="logo-strip" aria-label="Trusted by teams at leading companies">
       <div class="container">
-        <div class="section-intro"><div class="eyebrow"><span class="eyebrow-line"></span> Everything you need to rank</div><h2>Less noise.<br><em>More momentum.</em></h2><p>One intelligent workspace to find what matters, create what converts, and measure what grows.</p></div>
-        <div class="feature-grid">
-          <article class="feature-card feature-large"><div class="feature-icon lime-icon">⌕</div><h3>See the full picture</h3><p>Know exactly where you stand and what to do next with a clear, prioritized view of your search performance.</p><a href="#contact">Explore analytics <span>↗</span></a><div class="mini-bars" aria-hidden="true"><i style="height:35%"></i><i style="height:50%"></i><i style="height:44%"></i><i style="height:68%"></i><i style="height:58%"></i><i style="height:85%"></i><i style="height:75%"></i><i style="height:100%"></i></div></article>
-          <article class="feature-card"><div class="feature-icon purple-icon">✦</div><h3>Create with clarity</h3><p>Build a content strategy around the topics your audience is already searching for.</p><a href="#contact">Discover Content Studio <span>↗</span></a><div class="keyword-pill">content strategy <b>92</b></div></article>
-          <article class="feature-card dark-card"><div class="feature-icon dark-icon">⌁</div><h3>Grow on repeat</h3><p>Turn insights into results with automated reporting your whole team can understand.</p><a href="#contact">See reporting <span>↗</span></a><div class="growth-number">+128%<small>organic growth</small></div></article>
+        <p class="logo-strip-label">Trusted by growth teams at</p>
+        <div class="logo-strip-logos">
+          <span class="brand-name">Vercel</span>
+          <span class="brand-name">Notion</span>
+          <span class="brand-name">Linear</span>
+          <span class="brand-name">Loom</span>
+          <span class="brand-name">Figma</span>
         </div>
       </div>
     </section>
 
-    <section class="section seo-tool-section" id="seo-checker">
-      <div class="container seo-tool-layout">
-        <div class="section-intro"><div class="eyebrow"><span class="eyebrow-line"></span> Free SEO tool</div><h2>Make every page<br><em>search ready.</em></h2><p>Check a draft before you publish for an instant score, clear fixes, and a live search snippet preview. Paste your content for private in-browser checks, or load a public page by URL.</p><div class="tool-note"><span>✓</span> Free to use · No account required · Updates as you type</div></div>
-        <form class="seo-checker" id="seo-checker-form">
-          <div class="checker-fields">
-            <label>Page title <span class="field-count" id="title-count">0 / 60</span><input id="page-title" maxlength="120" placeholder="A clear, compelling page title"></label>
-            <label>Meta description <span class="field-count" id="description-count">0 / 160</span><textarea id="page-description" rows="3" maxlength="320" placeholder="Summarize the page and give people a reason to click"></textarea></label>
-            <label>Target keyword<input id="target-keyword" placeholder="e.g. sustainable running shoes"></label>
-            <label>Page URL<input id="page-url" type="url" placeholder="https://example.com/your-page"></label>
-            <button class="button analyze-page-button" id="analyze-page" type="button">Analyze live page <span aria-hidden="true">↗</span></button>
-            <small class="analyze-message" id="analyze-message" aria-live="polite">Enter a public HTTPS page URL to load its current title, description, and text.</small>
-            <label>Page content<textarea id="page-content" rows="7" placeholder="Paste your article or landing page copy here…"></textarea></label>
+    <!-- ╔══════════════════════════════════════════╗
+         ║  FEATURES SECTION                       ║
+         ╚══════════════════════════════════════════╝ -->
+    <section class="features section" id="features" aria-labelledby="featuresHeading">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge--indigo">Features</span>
+          <h2 id="featuresHeading">Everything your SEO stack needs — in one place</h2>
+          <p>Stop juggling five tools. Rankly brings rank tracking, site auditing, content optimization, and automated client reporting under one roof.</p>
+        </div>
+
+        <div class="features-grid">
+
+          <!-- Feature 1 -->
+          <article class="feature-card" aria-labelledby="f1Heading">
+            <div class="feature-icon feature-icon--purple">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <h3 id="f1Heading">Real-Time Rank Analytics</h3>
+            <p>Track your keyword positions across Google, Bing, and YouTube daily. Get instant alerts when rankings shift and visualise SERP volatility over time.</p>
+            <ul class="feature-list">
+              <li>Daily rank updates across 190+ countries</li>
+              <li>SERP feature monitoring (snippets, PAA, local)</li>
+              <li>Competitor gap &amp; share-of-voice analysis</li>
+            </ul>
+          </article>
+
+          <!-- Feature 2 -->
+          <article class="feature-card feature-card--featured" aria-labelledby="f2Heading">
+            <div class="feature-badge">Most popular</div>
+            <div class="feature-icon feature-icon--white">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            </div>
+            <h3 id="f2Heading">AI Content Studio</h3>
+            <p>Generate SEO-optimised content briefs in seconds. Our AI analyses the top 10 results for your target keyword and extracts the exact topics, questions, and entities you must cover.</p>
+            <ul class="feature-list">
+              <li>AI-generated content briefs &amp; outlines</li>
+              <li>Semantic NLP entity scoring</li>
+              <li>Readability &amp; E-E-A-T recommendations</li>
+            </ul>
+          </article>
+
+          <!-- Feature 3 -->
+          <article class="feature-card" aria-labelledby="f3Heading">
+            <div class="feature-icon feature-icon--green">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </div>
+            <h3 id="f3Heading">Automated Reporting</h3>
+            <p>White-label PDF and live dashboard reports sent automatically to clients every week or month. Zero manual effort, 100% professional presentation.</p>
+            <ul class="feature-list">
+              <li>Branded PDF &amp; shareable live dashboards</li>
+              <li>Scheduled weekly &amp; monthly delivery</li>
+              <li>Custom KPI selection per client</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ╔══════════════════════════════════════════╗
+         ║  METRICS / STATS SECTION                ║
+         ╚══════════════════════════════════════════╝ -->
+    <section class="metrics section" aria-labelledby="metricsHeading">
+      <div class="container">
+        <h2 id="metricsHeading" class="visually-hidden">Rankly by the numbers</h2>
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <span class="metric-val" data-count="84" data-suffix="k">0</span>
+            <span class="metric-label">Avg. monthly organic traffic per account</span>
           </div>
-          <div class="checker-results" aria-live="polite">
-            <div class="score-display"><span class="score-ring" id="seo-score">0</span><div><strong>On-page score</strong><small id="score-summary">Add page details to get started</small></div></div>
-            <ul class="check-list" id="seo-check-list"><li>Enter your page details to see recommendations.</li></ul>
-            <div class="snippet-preview"><small>GOOGLE SEARCH PREVIEW</small><strong id="snippet-title">Your page title will appear here</strong><span id="snippet-url">example.com › your-page</span><p id="snippet-description">Your meta description preview will appear here.</p></div>
+          <div class="metric-card">
+            <span class="metric-val" data-count="1284" data-suffix="">0</span>
+            <span class="metric-label">Average keywords ranked per project</span>
+          </div>
+          <div class="metric-card metric-card--accent">
+            <span class="metric-val" data-count="128" data-suffix="%">0</span>
+            <span class="metric-label">Average YoY organic traffic growth</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-val" data-count-float="4.9" data-suffix="/5">0</span>
+            <span class="metric-label">Average customer satisfaction rating</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ╔══════════════════════════════════════════╗
+         ║  ON-PAGE SEO CHECKER                    ║
+         ╚══════════════════════════════════════════╝ -->
+    <section class="seo-checker section" id="seo-checker" aria-labelledby="checkerHeading">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge--green">Free Tool</span>
+          <h2 id="checkerHeading">On-Page SEO Checker</h2>
+          <p>Paste your page details below and get an instant SEO score with a prioritised fix list — completely free, no sign-up needed.</p>
+        </div>
+
+        <div class="checker-layout">
+          <!-- Input Form -->
+          <div class="checker-form-wrap">
+            <form class="checker-form" id="seoCheckerForm" novalidate aria-label="SEO audit form">
+              <div class="form-row">
+                <label for="pageTitle">Page Title <span class="req" aria-hidden="true">*</span></label>
+                <input type="text" id="pageTitle" name="pageTitle" placeholder="Best SEO Tools for Small Businesses in 2025" maxlength="70" required aria-required="true" />
+                <span class="char-count" id="titleCount">0/70</span>
+              </div>
+              <div class="form-row">
+                <label for="metaDesc">Meta Description <span class="req" aria-hidden="true">*</span></label>
+                <textarea id="metaDesc" name="metaDesc" rows="3" placeholder="Discover the top-rated SEO tools for small businesses. Track rankings, fix on-page issues, and grow organic traffic." maxlength="160" required aria-required="true"></textarea>
+                <span class="char-count" id="descCount">0/160</span>
+              </div>
+              <div class="form-row-grid">
+                <div class="form-row">
+                  <label for="targetKeyword">Target Keyword <span class="req" aria-hidden="true">*</span></label>
+                  <input type="text" id="targetKeyword" name="targetKeyword" placeholder="SEO tools for small business" required aria-required="true" />
+                </div>
+                <div class="form-row">
+                  <label for="pageUrl">Page URL</label>
+                  <input type="url" id="pageUrl" name="pageUrl" placeholder="https://yoursite.com/blog/seo-tools" />
+                </div>
+              </div>
+              <div class="form-row">
+                <label for="pageContent">Page Content <span class="optional">(optional — paste main body text)</span></label>
+                <textarea id="pageContent" name="pageContent" rows="6" placeholder="Paste your page's main content here for a deeper content analysis..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn--lg btn--full" id="analyzeBtn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                Analyze live page
+              </button>
+            </form>
+          </div>
+
+          <!-- Results Panel -->
+          <div class="checker-results" id="checkerResults" aria-live="polite" aria-label="SEO analysis results">
+            <div class="results-placeholder" id="resultsPlaceholder">
+              <div class="placeholder-icon">🔍</div>
+              <p>Fill in the form and click <strong>Analyze live page</strong> to see your SEO score and recommendations.</p>
+            </div>
+
+            <!-- Score ring + checklist (hidden until analysis runs) -->
+            <div class="results-content hidden" id="resultsContent">
+              <div class="results-top">
+                <div class="score-ring-wrap">
+                  <svg class="score-ring" viewBox="0 0 120 120" width="120" height="120" aria-hidden="true">
+                    <circle cx="60" cy="60" r="52" fill="none" stroke="#e2e8f0" stroke-width="10"/>
+                    <circle cx="60" cy="60" r="52" fill="none" stroke="#6366f1" stroke-width="10"
+                      stroke-dasharray="326.7" stroke-dashoffset="326.7" stroke-linecap="round"
+                      transform="rotate(-90 60 60)" class="score-arc" id="scoreArc"/>
+                  </svg>
+                  <div class="score-inner">
+                    <span class="score-number" id="scoreNumber">0</span>
+                    <span class="score-label">/ 100</span>
+                  </div>
+                </div>
+                <div class="score-meta">
+                  <h3 id="scoreGrade">Analyzing…</h3>
+                  <p id="scoreDescription">Please wait while we audit your page.</p>
+                </div>
+              </div>
+
+              <ul class="check-list" id="checkList" aria-label="SEO checklist" role="list"></ul>
+
+              <!-- SERP Preview -->
+              <div class="serp-preview" id="serpPreview">
+                <h3 class="serp-label">Google SERP Preview</h3>
+                <div class="serp-snippet">
+                  <div class="serp-favicon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#5f6368"><circle cx="12" cy="12" r="10"/></svg>
+                  </div>
+                  <div class="serp-meta">
+                    <span class="serp-site" id="serpSite">yoursite.com</span>
+                    <span class="serp-breadcrumb" id="serpBreadcrumb">› blog › seo-tools</span>
+                  </div>
+                  <p class="serp-title" id="serpTitle">Your page title will appear here</p>
+                  <p class="serp-desc" id="serpDesc">Your meta description will appear here in search results. Make it compelling and relevant to the target keyword.</p>
+                </div>
+              </div>
+
+              <div class="seo-trend-card" aria-label="Live SEO score trend">
+                <div class="seo-trend-heading">
+                  <div>
+                    <span class="trend-kicker">Live signal</span>
+                    <h3>Optimisation momentum</h3>
+                  </div>
+                  <span class="trend-period">Based on your inputs</span>
+                </div>
+                <svg id="seoGraph" class="seo-graph" viewBox="0 0 320 128" role="img" aria-label="SEO score trend graph"></svg>
+                <div class="trend-labels" aria-hidden="true"><span>Start</span><span>Title</span><span>Meta</span><span>Content</span><span>Now</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ╔══════════════════════════════════════════╗
+         ║  HOW IT WORKS                           ║
+         ╚══════════════════════════════════════════╝ -->
+    <section class="how-it-works section" id="how-it-works" aria-labelledby="howHeading">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge--purple">Process</span>
+          <h2 id="howHeading">From sign-up to page 1 in three steps</h2>
+          <p>Rankly is built for speed. Most users see their first ranking improvements within 30 days.</p>
+        </div>
+
+        <ol class="steps-list" role="list">
+          <li class="step">
+            <div class="step-number" aria-hidden="true">01</div>
+            <div class="step-body">
+              <h3>Connect your website</h3>
+              <p>Link your Google Search Console, paste your sitemap URL, or simply enter your domain. Rankly crawls up to 10,000 pages and surfaces your biggest wins in minutes.</p>
+            </div>
+            <div class="step-visual step-visual--connect">
+              <div class="step-card">
+                <span>🔗</span>
+                <span>rankly.io/connect → <strong>yoursite.com</strong></span>
+              </div>
+            </div>
+          </li>
+
+          <li class="step step--reverse">
+            <div class="step-number" aria-hidden="true">02</div>
+            <div class="step-body">
+              <h3>Get your personalised SEO roadmap</h3>
+              <p>Rankly's AI prioritises every issue by estimated traffic impact — so you always work on what matters most. No more guessing, no more wasted effort on low-value fixes.</p>
+            </div>
+            <div class="step-visual step-visual--roadmap">
+              <div class="step-card">
+                <span>📋</span>
+                <span>23 opportunities found · <strong>Est. +4,200 visits/mo</strong></span>
+              </div>
+            </div>
+          </li>
+
+          <li class="step">
+            <div class="step-number" aria-hidden="true">03</div>
+            <div class="step-body">
+              <h3>Publish, track, and scale</h3>
+              <p>Fix issues, publish AI-optimised content, and watch your rankings climb. Rankly monitors every change and sends you a weekly progress digest — so you always know what's working.</p>
+            </div>
+            <div class="step-visual step-visual--scale">
+              <div class="step-card">
+                <span>📈</span>
+                <span>Week 4 · Organic traffic <strong>↑ 34%</strong></span>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ╔══════════════════════════════════════════╗
+         ║  COMPARISON SECTION                     ║
+         ╚══════════════════════════════════════════╝ -->
+    <section class="comparison section" aria-labelledby="comparisonHeading">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge--indigo">Why Rankly</span>
+          <h2 id="comparisonHeading">Rankly vs. traditional SEO agencies</h2>
+          <p>Agencies charge $3,000–$10,000/month and keep you in the dark. Rankly gives you full transparency and better results for a fraction of the cost.</p>
+        </div>
+
+        <div class="table-wrap">
+          <table class="comparison-table" aria-label="Comparison between Rankly and traditional SEO agencies">
+            <thead>
+              <tr>
+                <th scope="col">Feature</th>
+                <th scope="col" class="col-rankly">
+                  <svg width="20" height="20" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="6" fill="#6366f1"/><path d="M8 22L12 14L16 18L20 10L24 22" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Rankly
+                </th>
+                <th scope="col" class="col-agency">Traditional Agency</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Monthly cost</td>
+                <td class="col-rankly"><strong>$29 – $199</strong></td>
+                <td class="col-agency">$3,000 – $10,000+</td>
+              </tr>
+              <tr>
+                <td>Real-time rank tracking</td>
+                <td class="col-rankly check">✓</td>
+                <td class="col-agency cross">Rarely</td>
+              </tr>
+              <tr>
+                <td>Transparent reporting</td>
+                <td class="col-rankly check">✓ Live dashboards</td>
+                <td class="col-agency cross">Monthly PDFs (if lucky)</td>
+              </tr>
+              <tr>
+                <td>AI content briefs</td>
+                <td class="col-rankly check">✓</td>
+                <td class="col-agency cross">Manual (slow)</td>
+              </tr>
+              <tr>
+                <td>On-page SEO audits</td>
+                <td class="col-rankly check">✓ Automated, daily</td>
+                <td class="col-agency cross">Quarterly, at extra cost</td>
+              </tr>
+              <tr>
+                <td>Contract lock-in</td>
+                <td class="col-rankly check">None — cancel anytime</td>
+                <td class="col-agency cross">6–12 month minimum</td>
+              </tr>
+              <tr>
+                <td>Time to first results</td>
+                <td class="col-rankly check">Within 30 days</td>
+                <td class="col-agency cross">3–6 months</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ╔══════════════════════════════════════════╗
+         ║  TESTIMONIALS                           ║
+         ╚══════════════════════════════════════════╝ -->
+    <section class="testimonials section" id="stories" aria-labelledby="testimonialsHeading">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge--green">Customer stories</span>
+          <h2 id="testimonialsHeading">Real teams. Real results.</h2>
+        </div>
+
+        <div class="testimonials-carousel" id="testimonialsCarousel" aria-roledescription="carousel" aria-label="Customer testimonials">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-slide" role="group" aria-roledescription="slide" aria-label="Testimonial 1 of 3" data-index="0">
+            <div class="testimonial-card">
+              <div class="testimonial-stars" aria-label="5 stars">★★★★★</div>
+              <blockquote>
+                <p>"We went from 4,200 to 31,000 monthly visitors in 8 months using Rankly. The AI content briefs alone saved us 20 hours a week. It's the best SEO investment we've ever made."</p>
+              </blockquote>
+              <div class="testimonial-author">
+                <div class="author-avatar" aria-hidden="true" style="background: linear-gradient(135deg,#6366f1,#8b5cf6);">SR</div>
+                <div class="author-info">
+                  <strong>Sarah Reynolds</strong>
+                  <span>Head of Growth, Framestack</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-slide" role="group" aria-roledescription="slide" aria-label="Testimonial 2 of 3" data-index="1" hidden>
+            <div class="testimonial-card">
+              <div class="testimonial-stars" aria-label="5 stars">★★★★★</div>
+              <blockquote>
+                <p>"I manage SEO for 12 clients. Rankly's automated white-label reporting alone saves me 30+ hours per month. My clients see transparent dashboards they actually understand, and my retention rate went from 70% to 97%."</p>
+              </blockquote>
+              <div class="testimonial-author">
+                <div class="author-avatar" aria-hidden="true" style="background: linear-gradient(135deg,#10b981,#059669);">DM</div>
+                <div class="author-info">
+                  <strong>Daniel Morrow</strong>
+                  <span>Founder, Morrow Digital Agency</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-slide" role="group" aria-roledescription="slide" aria-label="Testimonial 3 of 3" data-index="2" hidden>
+            <div class="testimonial-card">
+              <div class="testimonial-stars" aria-label="5 stars">★★★★★</div>
+              <blockquote>
+                <p>"Rankly replaced four separate tools — Ahrefs, Screaming Frog, SurferSEO, and our reporting tool. We cut our SEO spend by 68% and actually improved our results. The on-page checker is a game-changer."</p>
+              </blockquote>
+              <div class="testimonial-author">
+                <div class="author-avatar" aria-hidden="true" style="background: linear-gradient(135deg,#f59e0b,#d97706);">LT</div>
+                <div class="author-info">
+                  <strong>Leila Torres</strong>
+                  <span>SEO Lead, Nuvocraft SaaS</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carousel controls -->
+        <div class="carousel-controls" aria-label="Carousel navigation">
+          <button class="carousel-btn" id="prevTestimonial" aria-label="Previous testimonial">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <div class="carousel-dots" role="tablist" aria-label="Testimonial tabs">
+            <button class="carousel-dot active" role="tab" aria-selected="true" aria-label="Testimonial 1" data-slide="0"></button>
+            <button class="carousel-dot" role="tab" aria-selected="false" aria-label="Testimonial 2" data-slide="1"></button>
+            <button class="carousel-dot" role="tab" aria-selected="false" aria-label="Testimonial 3" data-slide="2"></button>
+          </div>
+          <button class="carousel-btn" id="nextTestimonial" aria-label="Next testimonial">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ╔══════════════════════════════════════════╗
+         ║  INTEGRATIONS SECTION                   ║
+         ╚══════════════════════════════════════════╝ -->
+    <section class="integrations section" aria-labelledby="integrationsHeading">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge--purple">Integrations</span>
+          <h2 id="integrationsHeading">Plays nicely with your existing stack</h2>
+          <p>Connect Rankly to the tools you already use — no engineering effort required.</p>
+        </div>
+        <div class="integrations-grid">
+
+          <div class="integration-tile" aria-label="Google Search Console integration">
+            <div class="integration-icon" style="background:#fff3e0;">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" fill="#4285F4"/>
+                <circle cx="12" cy="12" r="4" fill="#fff"/>
+              </svg>
+            </div>
+            <span>Search Console</span>
+          </div>
+
+          <div class="integration-tile" aria-label="Google Analytics 4 integration">
+            <div class="integration-icon" style="background:#e8f5e9;">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <rect x="3" y="12" width="4" height="9" rx="1" fill="#F9AB00"/>
+                <rect x="10" y="6" width="4" height="15" rx="1" fill="#E37400"/>
+                <rect x="17" y="2" width="4" height="19" rx="1" fill="#E37400" opacity="0.5"/>
+              </svg>
+            </div>
+            <span>Google Analytics 4</span>
+          </div>
+
+          <div class="integration-tile" aria-label="Ahrefs integration">
+            <div class="integration-icon" style="background:#fff8e1;">
+              <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
+                <text y="20" font-size="18" font-weight="900" fill="#FF7043">A</text>
+              </svg>
+            </div>
+            <span>Ahrefs</span>
+          </div>
+
+          <div class="integration-tile" aria-label="Semrush integration">
+            <div class="integration-icon" style="background:#fce4ec;">
+              <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
+                <text y="20" font-size="16" font-weight="900" fill="#e84393">S</text>
+              </svg>
+            </div>
+            <span>Semrush</span>
+          </div>
+
+          <div class="integration-tile" aria-label="Slack integration">
+            <div class="integration-icon" style="background:#e8eaf6;">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <rect x="3"  y="3"  width="7" height="7" rx="2" fill="#E01E5A"/>
+                <rect x="14" y="3"  width="7" height="7" rx="2" fill="#36C5F0"/>
+                <rect x="3"  y="14" width="7" height="7" rx="2" fill="#2EB67D"/>
+                <rect x="14" y="14" width="7" height="7" rx="2" fill="#ECB22E"/>
+              </svg>
+            </div>
+            <span>Slack</span>
+          </div>
+
+          <div class="integration-tile" aria-label="HubSpot integration">
+            <div class="integration-icon" style="background:#fff3e0;">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle cx="17" cy="7"  r="3" fill="#FF7A59"/>
+                <circle cx="7"  cy="17" r="3" fill="#FF7A59"/>
+                <line x1="7" y1="7" x2="17" y2="17" stroke="#FF7A59" stroke-width="2"/>
+                <circle cx="7"  cy="7"  r="2" fill="#FF7A59" opacity="0.5"/>
+                <circle cx="17" cy="17" r="2" fill="#FF7A59" opacity="0.5"/>
+              </svg>
+            </div>
+            <span>HubSpot</span>
+          </div>
+
+        </div>
+        <p class="integrations-footnote">+ dozens more via Zapier &amp; native API</p>
+      </div>
+    </section>
+
+    <!-- ╔══════════════════════════════════════════╗
+         ║  PRICING                                ║
+         ╚══════════════════════════════════════════╝ -->
+    <section class="pricing section" id="pricing" aria-labelledby="pricingHeading">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge--indigo">Pricing</span>
+          <h2 id="pricingHeading">Simple, transparent pricing</h2>
+          <p>No hidden fees. No agency mark-ups. Cancel any time.</p>
+          <div class="billing-toggle" role="group" aria-label="Billing frequency">
+            <button class="toggle-btn active" id="monthlyToggle" aria-pressed="true">Monthly</button>
+            <button class="toggle-btn" id="annualToggle" aria-pressed="false">Annual <span class="save-badge">Save 20%</span></button>
+          </div>
+        </div>
+
+        <div class="pricing-grid">
+
+          <!-- Starter -->
+          <article class="pricing-card" aria-labelledby="starterHeading">
+            <div class="plan-name">Starter</div>
+            <div class="plan-price">
+              <span class="price-amount" data-monthly="29" data-annual="23">$29</span>
+              <span class="price-period">/month</span>
+            </div>
+            <p class="plan-desc">Perfect for bloggers, solopreneurs, and small business owners getting serious about SEO.</p>
+            <ul class="plan-features" role="list">
+              <li>3 projects / websites</li>
+              <li>500 tracked keywords</li>
+              <li>Daily rank updates</li>
+              <li>On-page SEO checker</li>
+              <li>Basic site audit</li>
+              <li>Email support</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline btn--full plan-cta">Start free trial</a>
+          </article>
+
+          <!-- Growth (featured) -->
+          <article class="pricing-card pricing-card--featured" aria-labelledby="growthHeading">
+            <div class="plan-badge">Most popular</div>
+            <div class="plan-name">Growth</div>
+            <div class="plan-price">
+              <span class="price-amount" data-monthly="79" data-annual="63">$79</span>
+              <span class="price-period">/month</span>
+            </div>
+            <p class="plan-desc">For growing teams and content marketers who need AI-powered content and detailed analytics.</p>
+            <ul class="plan-features" role="list">
+              <li>15 projects / websites</li>
+              <li>2,500 tracked keywords</li>
+              <li>Daily rank updates</li>
+              <li>AI content briefs</li>
+              <li>Advanced site audit</li>
+              <li>White-label reports</li>
+              <li>Google Search Console &amp; GA4 integration</li>
+              <li>Priority live chat support</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary btn--full plan-cta">Start free trial</a>
+          </article>
+
+          <!-- Agency -->
+          <article class="pricing-card" aria-labelledby="agencyHeading">
+            <div class="plan-name">Agency</div>
+            <div class="plan-price">
+              <span class="price-amount" data-monthly="199" data-annual="159">$199</span>
+              <span class="price-period">/month</span>
+            </div>
+            <p class="plan-desc">Built for SEO agencies managing multiple clients with enterprise-grade reporting and collaboration.</p>
+            <ul class="plan-features" role="list">
+              <li>Unlimited projects</li>
+              <li>10,000 tracked keywords</li>
+              <li>Hourly rank updates</li>
+              <li>AI content studio (unlimited briefs)</li>
+              <li>Full technical audit suite</li>
+              <li>Fully branded client portals</li>
+              <li>All integrations + API access</li>
+              <li>Dedicated account manager</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline btn--full plan-cta">Start free trial</a>
+          </article>
+
+        </div>
+        <p class="pricing-note">All plans include a <strong>14-day free trial</strong>. No credit card required. <a href="#">Compare all features →</a></p>
+      </div>
+    </section>
+
+    <!-- ╔══════════════════════════════════════════╗
+         ║  FAQ                                    ║
+         ╚══════════════════════════════════════════╝ -->
+    <section class="faq section" id="faq" aria-labelledby="faqHeading">
+      <div class="container faq-container">
+        <div class="section-header">
+          <span class="badge badge--purple">FAQ</span>
+          <h2 id="faqHeading">Frequently asked questions</h2>
+          <p>Can't find the answer you're looking for? <a href="mailto:support@rankly.io">Email our team</a> — we reply within 4 hours.</p>
+        </div>
+
+        <div class="faq-list" role="list">
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq1">
+              Is there a free trial for Rankly?
+              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" id="faq1" hidden>
+              <p>Yes. Every plan includes a <strong>14-day free trial</strong> with full feature access — no credit card required. If you decide Rankly isn't right for you, simply cancel before the trial ends and you won't be charged a penny.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq2">
+              How does Rankly's on-page SEO checker work?
+              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" id="faq2" hidden>
+              <p>Enter your page URL and target keyword. Rankly fetches the live page, analyses 60+ on-page factors including title tags, meta descriptions, heading hierarchy, content depth, Core Web Vitals, and Schema markup, then returns a prioritised action list so you know exactly what to fix first.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq3">
+              Can I track keywords for multiple websites?
+              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" id="faq3" hidden>
+              <p>Absolutely. All plans support multiple projects. The <strong>Starter</strong> plan includes up to 3 projects, <strong>Growth</strong> supports up to 15, and <strong>Agency</strong> is unlimited. You can switch between projects instantly from a single dashboard.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq4">
+              Does Rankly integrate with Google Search Console and Analytics?
+              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" id="faq4" hidden>
+              <p>Yes. Rankly natively integrates with <strong>Google Search Console</strong>, <strong>Google Analytics 4</strong>, and dozens of other tools including Ahrefs, SEMrush, Slack, and HubSpot. All integrations are available from the Growth plan upwards.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq5">
+              What kind of support is available?
+              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" id="faq5" hidden>
+              <p><strong>Starter</strong> users get email support with a 24-hour response SLA. <strong>Growth</strong> users get priority email and live chat (1-hour SLA). <strong>Agency</strong> users receive a dedicated account manager with a guaranteed 30-minute SLA and quarterly strategy calls.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ╔══════════════════════════════════════════╗
+         ║  CTA / CONTACT SECTION                  ║
+         ╚══════════════════════════════════════════╝ -->
+    <section class="cta-section section" id="contact" aria-labelledby="ctaHeading">
+      <div class="container cta-container">
+        <div class="cta-glow" aria-hidden="true"></div>
+        <span class="badge badge--light">Get started free</span>
+        <h2 id="ctaHeading">Ready to be found?</h2>
+        <p>Enter your email and we'll run a free 60-second SEO audit of your homepage — no credit card, no commitment, no fluff.</p>
+        <form class="cta-form" id="ctaForm" novalidate aria-label="Free audit email form">
+          <div class="cta-input-wrap">
+            <label for="ctaEmail" class="visually-hidden">Your work email address</label>
+            <input type="email" id="ctaEmail" name="email" placeholder="you@company.com" required aria-required="true" autocomplete="email" />
+            <button type="submit" class="btn btn-primary">Get my free audit</button>
+          </div>
+          <p class="cta-subtext">Join 2,847 marketers already growing with Rankly. Unsubscribe anytime.</p>
+          <div class="cta-success hidden" id="ctaSuccess" role="status">
+            ✅ You're on the list! Check your inbox for your free audit within 60 seconds.
           </div>
         </form>
       </div>
     </section>
 
-    <section class="section workflow-section" id="how-it-works">
-      <div class="container workflow"><div class="workflow-copy"><div class="eyebrow"><span class="eyebrow-line"></span> Your growth, in focus</div><h2>Stop guessing.<br><em>Start growing.</em></h2><p>Rankly replaces scattered spreadsheets and stale reports with a simple, living roadmap to better rankings.</p><a class="button" href="#contact">Build your roadmap <span>↗</span></a></div><div class="steps"><div class="step"><span class="step-number">01</span><div><h3>Find your opportunity</h3><p>Uncover the keywords and topics where you can win fastest.</p></div><span class="step-arrow">↗</span></div><div class="step"><span class="step-number">02</span><div><h3>Make your move</h3><p>Get clear briefs and recommendations to create content that ranks.</p></div><span class="step-arrow">↗</span></div><div class="step"><span class="step-number">03</span><div><h3>Watch it compound</h3><p>Track your progress and turn every win into the next one.</p></div><span class="step-arrow">↗</span></div></div></div>
-    </section>
-
-    <section class="section testimonial-section" id="stories"><div class="container testimonial"><div class="quote-mark">“</div><blockquote>Rankly helped us stop treating SEO like a side project. In six months, organic became our <em>number one</em> acquisition channel.</blockquote><div class="quote-author"><span class="author-avatar">EC</span><span><strong>Emma Chen</strong><small>Head of Growth, Lattice</small></span></div><div class="quote-controls"><button aria-label="Previous testimonial">←</button><span>01 / 03</span><button aria-label="Next testimonial">→</button></div></div></section>
-
-    <section class="section pricing-section" id="pricing"><div class="container pricing-wrap"><div class="section-intro centered"><div class="eyebrow"><span class="eyebrow-line"></span> Simple, honest pricing</div><h2>Start small.<br><em>Grow without limits.</em></h2><p>Everything you need to make search your best growth channel.</p></div><div class="pricing-card"><div><span class="plan-label">Growth plan</span><h3>$79 <small>/ month</small></h3><p>For teams ready to turn organic traffic into a growth engine.</p></div><ul><li>Unlimited projects</li><li>Weekly opportunity insights</li><li>AI content briefs</li><li>Team reporting</li></ul><a class="button" href="#contact">Start 14-day free trial <span>↗</span></a></div></div></section>
-
-    <section class="section faq-section" id="faq">
-      <div class="container faq-layout">
-        <div class="section-intro"><div class="eyebrow"><span class="eyebrow-line"></span> Questions, answered</div><h2>Good SEO starts with <em>good questions.</em></h2><p>Here are the answers teams usually want before they make search a bigger part of their growth plan.</p></div>
-        <div class="faq-list">
-          <details open><summary>Is Rankly right for a small team?</summary><p>Yes. Rankly is designed to give lean teams a clear, prioritized SEO plan without needing a dedicated SEO department.</p></details>
-          <details><summary>How quickly will I see results?</summary><p>Most teams find actionable opportunities in their first week. Ranking improvements depend on your starting point, market, and publishing cadence.</p></details>
-          <details><summary>Can I cancel my plan anytime?</summary><p>Absolutely. There are no long-term contracts, and you can cancel or change your plan whenever you need to.</p></details>
-          <details><summary>Do you offer an SEO audit?</summary><p>Yes. Submit the form below and we will send a practical snapshot of your visibility, opportunities, and next steps.</p></details>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta-section" id="contact"><div class="container cta"><div class="cta-copy"><div class="eyebrow"><span class="eyebrow-line"></span> Your next chapter starts here</div><h2>Ready to be<br><em>found?</em></h2><p>Join 2,000+ teams building their next stage of growth with Rankly.</p></div><form class="audit-form"><label for="email">Get your free SEO audit</label><div class="form-row"><input id="email" name="email" type="email" placeholder="you@company.com" required><button class="button button-dark" type="submit">Get my audit <span>↗</span></button></div><small class="form-message" aria-live="polite"></small></form></div></section>
   </main>
 
-  <div class="modal" id="login" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="login-title">
-    <div class="modal-backdrop" data-close-login></div>
-    <section class="login-panel">
-      <button class="modal-close" type="button" aria-label="Close login" data-close-login>×</button>
-      <div class="login-brand"><span class="logo-mark"><span></span><span></span><span></span></span>rankly<span class="logo-period">.</span></div>
-      <div class="eyebrow"><span class="eyebrow-line"></span> Welcome back</div>
-      <h2 id="login-title">Log in to your<br><em>growth workspace.</em></h2>
-      <form class="login-form">
-        <label for="login-email">Work email</label>
-        <input id="login-email" type="email" placeholder="you@company.com" required>
-        <label for="login-password">Password</label>
-        <input id="login-password" type="password" placeholder="Enter your password" minlength="6" required>
-        <button class="button" type="submit">Log in <span>↗</span></button>
-        <small class="login-message" aria-live="polite"></small>
+  <!-- ╔══════════════════════════════════════════╗
+       ║  FOOTER                                 ║
+       ╚══════════════════════════════════════════╝ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo footer-logo" aria-label="Rankly homepage">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <rect width="32" height="32" rx="8" fill="url(#footerLogoGrad)"/>
+            <path d="M8 22L12 14L16 18L20 10L24 22" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="footerLogoGrad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <span class="logo-text">Rankly</span>
+        </a>
+        <p>AI-powered SEO that grows your organic traffic — without the agency price tag.</p>
+        <p class="footer-copy">&copy; 2025 Rankly Technologies Inc. All rights reserved.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div class="footer-col">
+          <h3>Product</h3>
+          <ul role="list">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#seo-checker">SEO Checker</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#">Changelog</a></li>
+            <li><a href="#">Roadmap</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Resources</h3>
+          <ul role="list">
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">SEO Guide 2025</a></li>
+            <li><a href="#">Case Studies</a></li>
+            <li><a href="#">API Docs</a></li>
+            <li><a href="#">Help Center</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Company</h3>
+          <ul role="list">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="footer-social">
+        <h3>Follow us</h3>
+        <div class="social-links">
+          <a href="https://twitter.com/RanklyHQ" target="_blank" rel="noopener noreferrer" aria-label="Rankly on Twitter/X">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://linkedin.com/company/rankly" target="_blank" rel="noopener noreferrer" aria-label="Rankly on LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://github.com/rankly" target="_blank" rel="noopener noreferrer" aria-label="Rankly on GitHub">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ╔══════════════════════════════════════════╗
+       ║  LOGIN MODAL                            ║
+       ╚══════════════════════════════════════════╝ -->
+  <div class="modal-overlay" id="loginModal" role="dialog" aria-modal="true" aria-labelledby="loginTitle" hidden>
+    <div class="modal">
+      <button class="modal-close" aria-label="Close login dialog" data-close="loginModal">✕</button>
+      <div class="modal-header">
+        <svg width="36" height="36" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="url(#mLogoGrad)"/><path d="M8 22L12 14L16 18L20 10L24 22" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="mLogoGrad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#6366f1"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs></svg>
+        <h2 id="loginTitle">Welcome back</h2>
+        <p>Log in to your Rankly account</p>
+      </div>
+      <form class="modal-form" id="loginForm" novalidate aria-label="Login form">
+        <div class="form-row">
+          <label for="loginEmail">Email address</label>
+          <input type="email" id="loginEmail" name="email" placeholder="you@company.com" required aria-required="true" autocomplete="email" />
+        </div>
+        <div class="form-row">
+          <label for="loginPassword">
+            Password
+            <a href="#" class="form-link forgot-link">Forgot password?</a>
+          </label>
+          <div class="password-wrap">
+            <input type="password" id="loginPassword" name="password" placeholder="••••••••" required aria-required="true" autocomplete="current-password" />
+            <button type="button" class="toggle-password" aria-label="Show password" data-target="loginPassword">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="modal-error hidden" id="loginError" role="alert"></div>
+        <button type="submit" class="btn btn-primary btn--full">Log in to Rankly</button>
       </form>
-      <p class="login-signup">New to Rankly? <a href="#register" data-switch-register>Start your free trial</a></p>
-    </section>
+      <p class="modal-footer-text">Don't have an account? <button class="link-btn" id="switchToRegister">Sign up free</button></p>
+    </div>
   </div>
 
-  <div class="modal" id="register" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="register-title">
-    <div class="modal-backdrop" data-close-register></div>
-    <section class="login-panel">
-      <button class="modal-close" type="button" aria-label="Close registration" data-close-register>×</button>
-      <div class="login-brand"><span class="logo-mark"><span></span><span></span><span></span></span>rankly<span class="logo-period">.</span></div>
-      <div class="eyebrow"><span class="eyebrow-line"></span> Start growing</div>
-      <h2 id="register-title">Create your<br><em>free workspace.</em></h2>
-      <form class="register-form">
-        <label for="register-name">Full name</label>
-        <input id="register-name" type="text" placeholder="Alex Morgan" autocomplete="name" required>
-        <label for="register-email">Work email</label>
-        <input id="register-email" type="email" placeholder="you@company.com" autocomplete="email" required>
-        <label for="register-password">Create password</label>
-        <input id="register-password" type="password" placeholder="At least 6 characters" minlength="6" autocomplete="new-password" required>
-        <label for="register-confirm">Confirm password</label>
-        <input id="register-confirm" type="password" placeholder="Repeat your password" minlength="6" autocomplete="new-password" required>
-        <button class="button" type="submit">Create account <span>↗</span></button>
-        <small class="register-message" aria-live="polite"></small>
+  <!-- ╔══════════════════════════════════════════╗
+       ║  REGISTER MODAL                         ║
+       ╚══════════════════════════════════════════╝ -->
+  <div class="modal-overlay" id="registerModal" role="dialog" aria-modal="true" aria-labelledby="registerTitle" hidden>
+    <div class="modal">
+      <button class="modal-close" aria-label="Close register dialog" data-close="registerModal">✕</button>
+      <div class="modal-header">
+        <svg width="36" height="36" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="url(#rLogoGrad)"/><path d="M8 22L12 14L16 18L20 10L24 22" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="rLogoGrad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#6366f1"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs></svg>
+        <h2 id="registerTitle">Start your free trial</h2>
+        <p>14 days free · No credit card needed</p>
+      </div>
+      <form class="modal-form" id="registerForm" novalidate aria-label="Registration form">
+        <div class="form-row-grid">
+          <div class="form-row">
+            <label for="regFirstName">First name</label>
+            <input type="text" id="regFirstName" name="firstName" placeholder="Alex" required aria-required="true" autocomplete="given-name" />
+          </div>
+          <div class="form-row">
+            <label for="regLastName">Last name</label>
+            <input type="text" id="regLastName" name="lastName" placeholder="Johnson" required aria-required="true" autocomplete="family-name" />
+          </div>
+        </div>
+        <div class="form-row">
+          <label for="regEmail">Work email</label>
+          <input type="email" id="regEmail" name="email" placeholder="you@company.com" required aria-required="true" autocomplete="email" />
+        </div>
+        <div class="form-row">
+          <label for="regPassword">Password</label>
+          <div class="password-wrap">
+            <input type="password" id="regPassword" name="password" placeholder="Min. 8 characters" required aria-required="true" minlength="8" autocomplete="new-password" />
+            <button type="button" class="toggle-password" aria-label="Show password" data-target="regPassword">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
+          </div>
+          <div class="password-strength" id="passwordStrength" aria-label="Password strength indicator">
+            <div class="strength-bar"><span id="strengthBar"></span></div>
+            <span id="strengthLabel" class="strength-label"></span>
+          </div>
+        </div>
+        <div class="form-row form-checkbox">
+          <label class="checkbox-label">
+            <input type="checkbox" id="regTerms" name="terms" required aria-required="true" />
+            <span>I agree to the <a href="#" target="_blank">Terms of Service</a> and <a href="#" target="_blank">Privacy Policy</a></span>
+          </label>
+        </div>
+        <div class="modal-error hidden" id="registerError" role="alert"></div>
+        <button type="submit" class="btn btn-primary btn--full">Create my free account</button>
       </form>
-      <p class="login-signup">Already have an account? <a href="#login" data-switch-login>Log in</a></p>
-    </section>
+      <p class="modal-footer-text">Already have an account? <button class="link-btn" id="switchToLogin">Log in</button></p>
+    </div>
   </div>
 
-  <footer class="footer"><div class="container footer-inner"><a class="logo" href="#"><span class="logo-mark"><span></span><span></span><span></span></span>rankly<span class="logo-period">.</span></a><span>© 2024 Rankly, Inc.</span><div><a href="#features">Product</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div></div></footer>
-  <script src="script.js"></script>
-  <script src="seo-tool.js"></script>
+  <!-- ╔══════════════════════════════════════════╗
+       ║  SCRIPTS                                ║
+       ╚══════════════════════════════════════════╝ -->
+  <script src="script.js" defer></script>
+  <script src="seo-tool.js" defer></script>
+
 </body>
 </html>

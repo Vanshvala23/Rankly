@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /.env
+Sitemap: https://rankly.io/sitemap.xml

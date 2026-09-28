@@ -1,0 +1,1489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ══ Core meta ══════════════════════════════════════════════════════════ -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore every Rankly feature: Keyword Research, Content Studio, Rank Tracking, Site Audit, Reporting & Competitor Analysis. Turn search into your best growth channel.">
+  <meta name="keywords" content="SEO tool features, keyword research, rank tracking, site audit, content studio, competitor analysis, SEO reporting, Rankly">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Rankly, Inc.">
+  <meta name="theme-color" content="#f8fafc">
+  <link rel="canonical" href="https://rankly.io/features">
+  <title>Features — Rankly | SEO Tools That Drive Real Growth</title>
+
+  <!-- ══ Open Graph ════════════════════════════════════════════════════════ -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rankly.io/features">
+  <meta property="og:title" content="Rankly Features — Everything You Need to Dominate Search">
+  <meta property="og:description" content="Keyword Research, Content Studio, Rank Tracking, Site Audit, Automated Reporting & Competitor Analysis — all in one intelligent SEO workspace.">
+  <meta property="og:image" content="https://rankly.io/og-features.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Rankly">
+  <meta property="og:locale" content="en_US">
+
+  <!-- ══ Twitter / X Card ══════════════════════════════════════════════════ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@rankly">
+  <meta name="twitter:creator" content="@rankly">
+  <meta name="twitter:title" content="Rankly Features — Everything You Need to Dominate Search">
+  <meta name="twitter:description" content="Keyword Research, Content Studio, Rank Tracking, Site Audit, Automated Reporting & Competitor Analysis — all in one intelligent SEO workspace.">
+  <meta name="twitter:image" content="https://rankly.io/og-features.png">
+
+  <!-- ══ Schema.org JSON-LD ════════════════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Rankly",
+    "url": "https://rankly.io",
+    "applicationCategory": "BusinessApplication",
+    "applicationSubCategory": "SEO Software",
+    "operatingSystem": "Web",
+    "description": "Rankly is an all-in-one SEO platform offering Keyword Research, AI-powered Content Studio, daily Rank Tracking, Site Audit, automated Reporting, and Competitor Analysis to help marketing teams dominate search results.",
+    "offers": {
+      "@type": "Offer",
+      "price": "79",
+      "priceCurrency": "USD",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "79",
+        "priceCurrency": "USD",
+        "unitText": "MONTH"
+      },
+      "url": "https://rankly.io/pricing"
+    },
+    "featureList": [
+      "Keyword Research with difficulty scores and search volume trends",
+      "AI-powered Content Studio with topic clusters and content gap analysis",
+      "Daily Rank Tracking with competitor benchmarking",
+      "Site Audit covering Core Web Vitals and crawl errors",
+      "Automated weekly reporting and custom dashboards",
+      "Competitor keyword and backlink gap analysis"
+    ],
+    "screenshot": "https://rankly.io/og-features.png",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "2000",
+      "bestRating": "5"
+    },
+    "provider": {
+      "@type": "Organization",
+      "name": "Rankly, Inc.",
+      "url": "https://rankly.io"
+    }
+  }
+  </script>
+
+  <!-- ══ Fonts ══════════════════════════════════════════════════════════════ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- ══ Styles ════════════════════════════════════════════════════════════ -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- ══ Page-specific styles ══════════════════════════════════════════════ -->
+  <style>
+    /* ── Feature hero ── */
+    .feat-hero {
+      padding: 7rem 0 5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .feat-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(185,248,92,.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .feat-hero .eyebrow { justify-content: center; margin-bottom: 1.25rem; }
+    .feat-hero h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2.4rem, 5.5vw, 4rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -.02em;
+      max-width: 760px;
+      margin: 0 auto .5rem;
+    }
+    .feat-hero h1 em { font-style: normal; color: var(--accent, #84c62f); }
+    .feat-hero .subtitle {
+      font-size: 1.15rem;
+      color: var(--text-muted, #6b7280);
+      max-width: 560px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.7;
+    }
+    .feat-hero-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    /* ── Feature tab nav ── */
+    .feat-tabs-wrap {
+      position: sticky;
+      top: 64px;
+      z-index: 40;
+      background: rgba(248,250,252,.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,0,0,.07);
+    }
+    .feat-tabs {
+      display: flex;
+      gap: 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    .feat-tabs::-webkit-scrollbar { display: none; }
+    .feat-tab {
+      flex-shrink: 0;
+      padding: .85rem 1.25rem;
+      font-size: .875rem;
+      font-weight: 600;
+      color: var(--text-muted, #6b7280);
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      transition: color .2s, border-color .2s;
+      white-space: nowrap;
+    }
+    .feat-tab:hover { color: var(--text, #111); }
+    .feat-tab.active { color: var(--accent, #84c62f); border-bottom-color: var(--accent, #84c62f); }
+
+    /* ── Feature section layout ── */
+    .feat-section {
+      padding: 6rem 0;
+      scroll-margin-top: 110px;
+    }
+    .feat-section:nth-child(even) { background: var(--surface, #f8fafc); }
+    .feat-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .feat-layout.reverse { direction: rtl; }
+    .feat-layout.reverse > * { direction: ltr; }
+    @media (max-width: 860px) {
+      .feat-layout, .feat-layout.reverse { grid-template-columns: 1fr; direction: ltr; gap: 3rem; }
+    }
+    .feat-copy .eyebrow { margin-bottom: 1rem; }
+    .feat-copy h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(1.75rem, 3vw, 2.5rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -.02em;
+      margin-bottom: 1rem;
+    }
+    .feat-copy h2 em { font-style: normal; color: var(--accent, #84c62f); }
+    .feat-copy p { color: var(--text-muted, #6b7280); line-height: 1.8; margin-bottom: 1.5rem; }
+    .feat-bullets { list-style: none; padding: 0; margin: 0 0 2rem; display: flex; flex-direction: column; gap: .75rem; }
+    .feat-bullets li {
+      display: flex;
+      align-items: flex-start;
+      gap: .75rem;
+      font-size: .95rem;
+      color: var(--text, #111);
+    }
+    .feat-bullets li::before {
+      content: '✓';
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      background: var(--accent, #84c62f);
+      color: #111;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .75rem;
+      font-weight: 700;
+      margin-top: .1rem;
+    }
+
+    /* ── Mock UI shared styles ── */
+    .mock-ui {
+      background: #fff;
+      border: 1px solid rgba(0,0,0,.08);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(0,0,0,.07), 0 1px 3px rgba(0,0,0,.04);
+    }
+    .mock-topbar {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .75rem 1rem;
+      border-bottom: 1px solid rgba(0,0,0,.06);
+      background: #fafafa;
+    }
+    .mock-dots { display: flex; gap: 5px; }
+    .mock-dots i {
+      display: block;
+      width: 10px; height: 10px;
+      border-radius: 50%;
+    }
+    .mock-dots i:nth-child(1) { background: #ff5f57; }
+    .mock-dots i:nth-child(2) { background: #febc2e; }
+    .mock-dots i:nth-child(3) { background: #28c840; }
+    .mock-topbar-label { font-size: .75rem; font-weight: 600; color: #6b7280; margin-left: .25rem; }
+    .mock-body { padding: 1.25rem; }
+
+    /* ── Mock: Keyword table ── */
+    .kw-table { width: 100%; border-collapse: collapse; font-size: .82rem; }
+    .kw-table thead th {
+      text-align: left;
+      padding: .4rem .6rem;
+      color: #9ca3af;
+      font-weight: 600;
+      font-size: .72rem;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .kw-table tbody tr { border-bottom: 1px solid #f8f8f8; transition: background .15s; }
+    .kw-table tbody tr:last-child { border-bottom: none; }
+    .kw-table tbody tr:hover { background: #fafff5; }
+    .kw-table tbody td { padding: .55rem .6rem; vertical-align: middle; }
+    .kw-kd {
+      display: inline-flex;
+      align-items: center;
+      gap: .3rem;
+      font-size: .75rem;
+      font-weight: 700;
+      padding: .2rem .45rem;
+      border-radius: 4px;
+    }
+    .kd-easy { background: #d1fae5; color: #065f46; }
+    .kd-med  { background: #fef3c7; color: #92400e; }
+    .kd-hard { background: #fee2e2; color: #991b1b; }
+    .kw-vol { font-weight: 600; color: #374151; }
+    .kw-trend {
+      display: inline-block;
+      width: 54px;
+      height: 20px;
+      vertical-align: middle;
+    }
+    .kw-intent {
+      font-size: .7rem;
+      padding: .15rem .4rem;
+      border-radius: 4px;
+      background: #eff6ff;
+      color: #1d4ed8;
+      font-weight: 600;
+    }
+    .mock-search-bar {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: .45rem .75rem;
+      margin-bottom: 1rem;
+    }
+    .mock-search-bar span { font-size: .8rem; color: #9ca3af; flex: 1; }
+    .mock-btn-sm {
+      background: #111;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: .3rem .7rem;
+      font-size: .75rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    /* ── Mock: Content brief card ── */
+    .brief-card { display: flex; flex-direction: column; gap: 1rem; }
+    .brief-header { display: flex; align-items: flex-start; gap: .75rem; }
+    .brief-icon {
+      width: 40px; height: 40px;
+      border-radius: 10px;
+      background: #f3e8ff;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .brief-meta strong { font-size: .95rem; display: block; margin-bottom: .2rem; }
+    .brief-meta small { color: #9ca3af; font-size: .78rem; }
+    .brief-score-row { display: flex; gap: .5rem; flex-wrap: wrap; }
+    .brief-pill {
+      font-size: .72rem;
+      font-weight: 600;
+      padding: .25rem .55rem;
+      border-radius: 20px;
+    }
+    .pill-purple { background: #f3e8ff; color: #6d28d9; }
+    .pill-lime   { background: #ecfccb; color: #3f6212; }
+    .pill-blue   { background: #eff6ff; color: #1d4ed8; }
+    .brief-outline { background: #f9fafb; border-radius: 8px; padding: .75rem 1rem; }
+    .brief-outline .outline-title { font-size: .72rem; font-weight: 700; color: #9ca3af; text-transform: uppercase; letter-spacing: .05em; margin-bottom: .5rem; }
+    .brief-outline ol { margin: 0; padding-left: 1.2rem; font-size: .82rem; color: #374151; display: flex; flex-direction: column; gap: .3rem; }
+    .cluster-row { display: flex; gap: .4rem; flex-wrap: wrap; }
+    .cluster-tag {
+      font-size: .73rem;
+      padding: .2rem .5rem;
+      border-radius: 20px;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      color: #374151;
+      font-weight: 500;
+    }
+    .cluster-tag.active-tag {
+      background: #111;
+      color: #b9f85c;
+      border-color: #111;
+    }
+    .brief-ai-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .3rem;
+      font-size: .72rem;
+      font-weight: 700;
+      color: #6d28d9;
+      background: #f3e8ff;
+      padding: .25rem .6rem;
+      border-radius: 20px;
+      align-self: flex-start;
+    }
+
+    /* ── Mock: Rank table ── */
+    .rank-table { width: 100%; border-collapse: collapse; font-size: .82rem; }
+    .rank-table thead th {
+      text-align: left;
+      padding: .4rem .6rem;
+      color: #9ca3af;
+      font-weight: 600;
+      font-size: .72rem;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .rank-table tbody tr { border-bottom: 1px solid #f8f8f8; }
+    .rank-table tbody tr:last-child { border-bottom: none; }
+    .rank-table tbody td { padding: .55rem .6rem; vertical-align: middle; }
+    .rank-pos {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px; height: 28px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: .8rem;
+    }
+    .pos-top { background: #d1fae5; color: #065f46; }
+    .pos-mid { background: #fef3c7; color: #92400e; }
+    .rank-delta { font-weight: 700; font-size: .82rem; }
+    .delta-up   { color: #16a34a; }
+    .delta-down { color: #dc2626; }
+    .delta-flat { color: #9ca3af; }
+    .rank-sparkline {
+      display: inline-block;
+      width: 56px;
+      height: 22px;
+      vertical-align: middle;
+    }
+    .rank-summary-bar {
+      display: flex;
+      gap: .75rem;
+      padding: .75rem 1rem;
+      background: #f9fafb;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+    .rank-stat { text-align: center; flex: 1; }
+    .rank-stat strong { display: block; font-size: 1.1rem; font-weight: 700; }
+    .rank-stat small { font-size: .72rem; color: #9ca3af; }
+
+    /* ── Mock: Audit score card ── */
+    .audit-card { display: flex; flex-direction: column; gap: 1rem; }
+    .audit-score-row {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+    .audit-donut {
+      position: relative;
+      width: 80px; height: 80px;
+      flex-shrink: 0;
+    }
+    .audit-donut svg { width: 80px; height: 80px; transform: rotate(-90deg); }
+    .audit-donut-label {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #111;
+    }
+    .audit-grade-info strong { font-size: 1rem; display: block; margin-bottom: .15rem; }
+    .audit-grade-info small { color: #16a34a; font-size: .8rem; font-weight: 600; }
+    .audit-checks { display: flex; flex-direction: column; gap: .5rem; }
+    .audit-check-row {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      padding: .5rem .75rem;
+      border-radius: 8px;
+      background: #f9fafb;
+      font-size: .82rem;
+    }
+    .audit-check-icon {
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: .7rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .check-pass { background: #d1fae5; color: #065f46; }
+    .check-warn { background: #fef3c7; color: #92400e; }
+    .check-fail { background: #fee2e2; color: #991b1b; }
+    .audit-check-row span { flex: 1; color: #374151; }
+    .audit-check-row small { color: #9ca3af; font-size: .72rem; }
+    .cwv-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: .5rem;
+    }
+    .cwv-item {
+      text-align: center;
+      padding: .6rem .4rem;
+      border-radius: 8px;
+      background: #f9fafb;
+    }
+    .cwv-val { font-size: 1rem; font-weight: 700; display: block; }
+    .cwv-name { font-size: .65rem; color: #9ca3af; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
+    .cwv-good { color: #16a34a; }
+    .cwv-ok   { color: #d97706; }
+    .cwv-bad  { color: #dc2626; }
+
+    /* ── Mock: Report card ── */
+    .report-card-inner { display: flex; flex-direction: column; gap: 1rem; }
+    .report-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: .6rem .75rem;
+      background: #f9fafb;
+      border-radius: 8px;
+    }
+    .report-header-row strong { font-size: .88rem; }
+    .report-header-row small { font-size: .72rem; color: #9ca3af; }
+    .report-badge {
+      font-size: .7rem;
+      font-weight: 700;
+      padding: .2rem .5rem;
+      border-radius: 20px;
+      background: #d1fae5;
+      color: #065f46;
+    }
+    .report-metrics { display: grid; grid-template-columns: repeat(2, 1fr); gap: .6rem; }
+    .report-metric-box {
+      padding: .75rem .9rem;
+      border-radius: 8px;
+      background: #f9fafb;
+      border: 1px solid #f0f0f0;
+    }
+    .report-metric-box .rmb-label { font-size: .72rem; color: #9ca3af; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; display: block; margin-bottom: .3rem; }
+    .report-metric-box .rmb-val { font-size: 1.2rem; font-weight: 700; display: block; }
+    .rmb-delta { font-size: .75rem; font-weight: 600; }
+    .rmb-up   { color: #16a34a; }
+    .rmb-down { color: #dc2626; }
+    .report-sharing-row {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      font-size: .8rem;
+      color: #6b7280;
+    }
+    .share-avatar {
+      width: 26px; height: 26px;
+      border-radius: 50%;
+      font-size: .65rem;
+      font-weight: 700;
+      color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .report-chart-bars {
+      display: flex;
+      align-items: flex-end;
+      gap: 4px;
+      height: 48px;
+    }
+    .rcb { flex: 1; border-radius: 3px 3px 0 0; background: #e5e7eb; }
+    .rcb.active { background: #84c62f; }
+
+    /* ── Mock: Competitor table ── */
+    .comp-table { width: 100%; border-collapse: collapse; font-size: .82rem; }
+    .comp-table thead th {
+      text-align: left;
+      padding: .4rem .6rem;
+      color: #9ca3af;
+      font-weight: 600;
+      font-size: .72rem;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .comp-table tbody tr { border-bottom: 1px solid #f8f8f8; }
+    .comp-table tbody tr:last-child { border-bottom: none; }
+    .comp-table tbody td { padding: .55rem .6rem; vertical-align: middle; }
+    .comp-domain { font-weight: 600; color: #111; }
+    .comp-traffic-bar {
+      display: flex;
+      align-items: center;
+      gap: .4rem;
+    }
+    .bar-track {
+      flex: 1;
+      height: 6px;
+      background: #f0f0f0;
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .bar-fill {
+      height: 100%;
+      border-radius: 3px;
+      background: var(--accent, #84c62f);
+    }
+    .bar-fill.comp-fill { background: #e5e7eb; }
+    .comp-tag {
+      font-size: .7rem;
+      padding: .15rem .4rem;
+      border-radius: 4px;
+      background: #eff6ff;
+      color: #1d4ed8;
+      font-weight: 600;
+    }
+    .comp-summary {
+      display: flex;
+      gap: .5rem;
+      flex-wrap: wrap;
+      margin-bottom: .75rem;
+    }
+    .comp-stat {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 1;
+      min-width: 70px;
+      padding: .6rem .4rem;
+      background: #f9fafb;
+      border-radius: 8px;
+    }
+    .comp-stat strong { font-size: 1rem; font-weight: 700; }
+    .comp-stat small { font-size: .68rem; color: #9ca3af; text-align: center; }
+
+    /* ── Benefits strip ── */
+    .benefits-strip {
+      padding: 4rem 0;
+      background: #111;
+      color: #fff;
+    }
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 1.5rem;
+      text-align: center;
+    }
+    @media (max-width: 1024px) { .benefits-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 640px)  { .benefits-grid { grid-template-columns: repeat(2, 1fr); } }
+    .benefit-item { display: flex; flex-direction: column; align-items: center; gap: .75rem; }
+    .benefit-icon {
+      width: 52px; height: 52px;
+      border-radius: 14px;
+      background: rgba(185,248,92,.12);
+      border: 1px solid rgba(185,248,92,.2);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem;
+    }
+    .benefit-label { font-size: .85rem; font-weight: 600; color: rgba(255,255,255,.85); line-height: 1.4; }
+
+    /* ── Pricing CTA banner ── */
+    .feat-cta {
+      padding: 6rem 0;
+      background: var(--surface, #f8fafc);
+      text-align: center;
+    }
+    .feat-cta-inner {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .feat-cta h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -.02em;
+      margin-bottom: 1rem;
+    }
+    .feat-cta h2 em { font-style: normal; color: var(--accent, #84c62f); }
+    .feat-cta p { color: var(--text-muted, #6b7280); line-height: 1.7; margin-bottom: 2rem; font-size: 1.05rem; }
+    .cta-plan-card {
+      background: #111;
+      color: #fff;
+      border-radius: 20px;
+      padding: 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-plan-card::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 220px; height: 220px;
+      background: radial-gradient(circle, rgba(185,248,92,.25), transparent 70%);
+      pointer-events: none;
+    }
+    .cta-plan-badge {
+      font-size: .75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: #b9f85c;
+      background: rgba(185,248,92,.12);
+      border: 1px solid rgba(185,248,92,.25);
+      padding: .3rem .8rem;
+      border-radius: 20px;
+    }
+    .cta-plan-price {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+    .cta-plan-price sup { font-size: 1.5rem; vertical-align: super; }
+    .cta-plan-price sub { font-size: 1rem; color: rgba(255,255,255,.5); font-weight: 400; }
+    .cta-plan-features {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: .6rem .75rem;
+      width: 100%;
+      text-align: left;
+    }
+    @media (max-width: 480px) { .cta-plan-features { grid-template-columns: 1fr; } }
+    .cta-feat-item {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      font-size: .87rem;
+      color: rgba(255,255,255,.8);
+    }
+    .cta-feat-item::before {
+      content: '✓';
+      width: 18px; height: 18px;
+      background: #b9f85c;
+      color: #111;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: .65rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .cta-plan-card .button {
+      background: #b9f85c;
+      color: #111;
+      padding: .9rem 2.5rem;
+      font-size: 1rem;
+    }
+    .cta-plan-card .button:hover { background: #a8e84f; }
+    .cta-fine {
+      font-size: .8rem;
+      color: rgba(255,255,255,.4);
+      margin-top: .25rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══ Announcement bar ══════════════════════════════════════════════════ -->
+  <div class="announcement">
+    <span class="announcement-dot"></span>
+    <span>Rankly 2.0 is here — see what's new</span>
+    <a href="#features">Explore features <span aria-hidden="true">↗</span></a>
+  </div>
+
+  <!-- ══ Header / Nav ══════════════════════════════════════════════════════ -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="logo" href="index.html" aria-label="Rankly home">
+        <span class="logo-mark"><span></span><span></span><span></span></span>
+        rankly<span class="logo-period">.</span>
+      </a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">
+        <span></span><span></span>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="features.html" aria-current="page">Product</a>
+        <a href="index.html#seo-checker">SEO tools</a>
+        <a href="index.html#how-it-works">How it works</a>
+        <a href="index.html#stories">Customers</a>
+        <a href="index.html#pricing">Pricing</a>
+        <a class="nav-login" href="#login" data-auth-login>Log in</a>
+        <a class="button button-small" href="#register" data-auth-register>Start for free <span aria-hidden="true">↗</span></a>
+        <div class="user-menu" hidden>
+          <button class="user-button" type="button" aria-expanded="false" aria-controls="user-dropdown" aria-label="Open account menu">
+            <span class="user-avatar">U</span><span class="user-button-name">Account</span><span class="user-chevron">⌄</span>
+          </button>
+          <div class="user-dropdown" id="user-dropdown" hidden>
+            <div class="user-summary"><span class="user-avatar user-avatar-large">U</span><div><strong class="user-name">Account</strong><small class="user-email">email@example.com</small></div></div>
+            <a href="index.html#contact">Request an audit</a>
+            <button type="button" data-logout>Log out <span>↗</span></button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ══ Page Hero ═════════════════════════════════════════════════════ -->
+    <section class="feat-hero container" aria-labelledby="feat-hero-heading">
+      <div class="eyebrow"><span class="eyebrow-line"></span> Full feature breakdown</div>
+      <h1 id="feat-hero-heading">Everything You Need to<br><em>Dominate Search</em></h1>
+      <p class="subtitle">Six purpose-built tools that work together — find keywords, create content, track rankings, fix your site, share results, and outmanoeuvre competitors, all from one workspace.</p>
+      <div class="feat-hero-actions">
+        <a class="button" href="index.html#contact">Start for free <span aria-hidden="true">↗</span></a>
+        <a class="text-link" href="#keyword-research"><span class="play-icon">▶</span> Explore features</a>
+      </div>
+    </section>
+
+    <!-- ══ Feature Tab Nav ════════════════════════════════════════════════ -->
+    <nav class="feat-tabs-wrap" aria-label="Feature sections">
+      <div class="feat-tabs">
+        <a class="feat-tab active" href="#keyword-research">Keyword Research</a>
+        <a class="feat-tab" href="#content-studio">Content Studio</a>
+        <a class="feat-tab" href="#rank-tracking">Rank Tracking</a>
+        <a class="feat-tab" href="#site-audit">Site Audit</a>
+        <a class="feat-tab" href="#reporting">Reporting</a>
+        <a class="feat-tab" href="#competitor-analysis">Competitor Analysis</a>
+      </div>
+    </nav>
+
+    <!-- ══ 1. Keyword Research ════════════════════════════════════════════ -->
+    <section class="feat-section" id="keyword-research" aria-labelledby="kw-heading">
+      <div class="container">
+        <div class="feat-layout">
+
+          <!-- copy -->
+          <div class="feat-copy">
+            <div class="eyebrow"><span class="eyebrow-line"></span> Keyword Research</div>
+            <h2 id="kw-heading">Find winning keywords <em>fast.</em></h2>
+            <p>Stop sifting through thousands of irrelevant keywords. Rankly's intelligent research engine surfaces the high-value opportunities your competitors haven't captured yet — complete with intent signals and difficulty scores so you know exactly where to focus first.</p>
+            <ul class="feat-bullets">
+              <li>Keyword Difficulty score from 0–100 with clear Easy / Medium / Hard labels</li>
+              <li>Monthly search volume trends powered by live data</li>
+              <li>Instant related keyword suggestions and question variants</li>
+              <li>SERP intent classification — informational, commercial, navigational, transactional</li>
+            </ul>
+            <a class="button button-small" href="index.html#contact">Try Keyword Research <span aria-hidden="true">↗</span></a>
+          </div>
+
+          <!-- mock UI -->
+          <div class="mock-ui" role="img" aria-label="Keyword research table showing keywords with difficulty scores, search volume, and trend sparklines">
+            <div class="mock-topbar">
+              <div class="mock-dots"><i></i><i></i><i></i></div>
+              <span class="mock-topbar-label">Keyword Explorer</span>
+            </div>
+            <div class="mock-body">
+              <div class="mock-search-bar">
+                <span>seo tools for startups</span>
+                <button class="mock-btn-sm" tabindex="-1" aria-hidden="true">Search</button>
+              </div>
+              <table class="kw-table">
+                <thead>
+                  <tr>
+                    <th>Keyword</th>
+                    <th>KD</th>
+                    <th>Volume</th>
+                    <th>Trend</th>
+                    <th>Intent</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>seo tools for startups</td>
+                    <td><span class="kw-kd kd-easy">Easy 22</span></td>
+                    <td><span class="kw-vol">8,100</span></td>
+                    <td>
+                      <svg class="kw-trend" viewBox="0 0 54 20" aria-hidden="true">
+                        <polyline points="0,16 9,14 18,10 27,12 36,7 45,4 54,2" fill="none" stroke="#84c62f" stroke-width="2" stroke-linecap="round"/>
+                      </svg>
+                    </td>
+                    <td><span class="kw-intent">Commercial</span></td>
+                  </tr>
+                  <tr>
+                    <td>best seo software 2024</td>
+                    <td><span class="kw-kd kd-med">Med 51</span></td>
+                    <td><span class="kw-vol">22,200</span></td>
+                    <td>
+                      <svg class="kw-trend" viewBox="0 0 54 20" aria-hidden="true">
+                        <polyline points="0,14 9,12 18,13 27,9 36,11 45,7 54,5" fill="none" stroke="#84c62f" stroke-width="2" stroke-linecap="round"/>
+                      </svg>
+                    </td>
+                    <td><span class="kw-intent">Commercial</span></td>
+                  </tr>
+                  <tr>
+                    <td>how to improve seo ranking</td>
+                    <td><span class="kw-kd kd-easy">Easy 31</span></td>
+                    <td><span class="kw-vol">14,800</span></td>
+                    <td>
+                      <svg class="kw-trend" viewBox="0 0 54 20" aria-hidden="true">
+                        <polyline points="0,15 9,13 18,14 27,10 36,8 45,6 54,3" fill="none" stroke="#84c62f" stroke-width="2" stroke-linecap="round"/>
+                      </svg>
+                    </td>
+                    <td><span class="kw-intent">Informational</span></td>
+                  </tr>
+                  <tr>
+                    <td>rank tracking tool</td>
+                    <td><span class="kw-kd kd-hard">Hard 74</span></td>
+                    <td><span class="kw-vol">40,500</span></td>
+                    <td>
+                      <svg class="kw-trend" viewBox="0 0 54 20" aria-hidden="true">
+                        <polyline points="0,10 9,11 18,9 27,10 36,8 45,9 54,7" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round"/>
+                      </svg>
+                    </td>
+                    <td><span class="kw-intent">Commercial</span></td>
+                  </tr>
+                  <tr>
+                    <td>content gap analysis</td>
+                    <td><span class="kw-kd kd-easy">Easy 28</span></td>
+                    <td><span class="kw-vol">6,600</span></td>
+                    <td>
+                      <svg class="kw-trend" viewBox="0 0 54 20" aria-hidden="true">
+                        <polyline points="0,17 9,15 18,12 27,9 36,7 45,5 54,2" fill="none" stroke="#84c62f" stroke-width="2" stroke-linecap="round"/>
+                      </svg>
+                    </td>
+                    <td><span class="kw-intent">Informational</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ 2. Content Studio ══════════════════════════════════════════════ -->
+    <section class="feat-section" id="content-studio" aria-labelledby="cs-heading">
+      <div class="container">
+        <div class="feat-layout reverse">
+
+          <!-- copy -->
+          <div class="feat-copy">
+            <div class="eyebrow"><span class="eyebrow-line"></span> Content Studio</div>
+            <h2 id="cs-heading">AI briefs that actually <em>rank.</em></h2>
+            <p>Great content starts with a great brief. Rankly's Content Studio analyses the top-ranking pages for your target keyword and generates a comprehensive, AI-powered brief in seconds — so your writers know exactly what to include before they write a single word.</p>
+            <ul class="feat-bullets">
+              <li>AI-powered content briefs with recommended headings, word count, and NLP terms</li>
+              <li>Topic clusters that map your entire content universe</li>
+              <li>Content gap analysis to find pages your competitors rank for — that you don't</li>
+              <li>Readability scoring and semantic keyword suggestions</li>
+            </ul>
+            <a class="button button-small" href="index.html#contact">Open Content Studio <span aria-hidden="true">↗</span></a>
+          </div>
+
+          <!-- mock UI -->
+          <div class="mock-ui" role="img" aria-label="AI content brief card showing topic clusters, outline suggestions, and SEO score">
+            <div class="mock-topbar">
+              <div class="mock-dots"><i></i><i></i><i></i></div>
+              <span class="mock-topbar-label">Content Brief</span>
+            </div>
+            <div class="mock-body">
+              <div class="brief-card">
+                <div class="brief-header">
+                  <div class="brief-icon" aria-hidden="true">✦</div>
+                  <div class="brief-meta">
+                    <strong>The Complete Guide to SEO Tools for Startups</strong>
+                    <small>Target keyword: seo tools for startups · KD 22 · Vol 8,100/mo</small>
+                  </div>
+                </div>
+                <div class="brief-score-row">
+                  <span class="brief-pill pill-lime">Word count: 2,400–3,000</span>
+                  <span class="brief-pill pill-purple">NLP terms: 24</span>
+                  <span class="brief-pill pill-blue">Readability: Grade 9</span>
+                </div>
+                <div class="brief-outline">
+                  <div class="outline-title">Recommended outline</div>
+                  <ol>
+                    <li>What are SEO tools and why startups need them</li>
+                    <li>Key features to look for in an SEO platform</li>
+                    <li>Top 7 SEO tools compared for early-stage teams</li>
+                    <li>How to build an SEO workflow with limited resources</li>
+                    <li>FAQ: SEO tools pricing, setup, and ROI</li>
+                  </ol>
+                </div>
+                <div>
+                  <div class="outline-title" style="font-size:.72rem;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.4rem;">Topic cluster</div>
+                  <div class="cluster-row">
+                    <span class="cluster-tag active-tag">SEO tools</span>
+                    <span class="cluster-tag">Keyword research</span>
+                    <span class="cluster-tag">Rank tracking</span>
+                    <span class="cluster-tag">Site audit</span>
+                    <span class="cluster-tag">Content strategy</span>
+                  </div>
+                </div>
+                <div class="brief-ai-badge" aria-label="Generated by AI">✦ Generated by Rankly AI</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ 3. Rank Tracking ═══════════════════════════════════════════════ -->
+    <section class="feat-section" id="rank-tracking" aria-labelledby="rt-heading">
+      <div class="container">
+        <div class="feat-layout">
+
+          <!-- copy -->
+          <div class="feat-copy">
+            <div class="eyebrow"><span class="eyebrow-line"></span> Rank Tracking</div>
+            <h2 id="rt-heading">Daily rank updates. <em>Zero surprises.</em></h2>
+            <p>Know exactly where every keyword stands — every morning. Rankly tracks your rankings daily across desktop and mobile, so you catch drops before they become disasters and celebrate wins the moment they happen.</p>
+            <ul class="feat-bullets">
+              <li>Daily rank updates with 7-day, 30-day, and 90-day history</li>
+              <li>Side-by-side competitor rank tracking for up to 10 rivals</li>
+              <li>Automated alerts when a keyword moves ±5 positions</li>
+              <li>Local and country-level rank tracking with SERP feature detection</li>
+            </ul>
+            <a class="button button-small" href="index.html#contact">Track your rankings <span aria-hidden="true">↗</span></a>
+          </div>
+
+          <!-- mock UI -->
+          <div class="mock-ui" role="img" aria-label="Rank tracking dashboard showing keyword positions with change indicators">
+            <div class="mock-topbar">
+              <div class="mock-dots"><i></i><i></i><i></i></div>
+              <span class="mock-topbar-label">Rank Tracker — Last 30 days</span>
+            </div>
+            <div class="mock-body">
+              <div class="rank-summary-bar">
+                <div class="rank-stat"><strong style="color:#16a34a">1,284</strong><small>Top 10 keywords</small></div>
+                <div class="rank-stat"><strong style="color:#16a34a">↑ 127</strong><small>Improved</small></div>
+                <div class="rank-stat"><strong style="color:#dc2626">↓ 34</strong><small>Dropped</small></div>
+                <div class="rank-stat"><strong style="color:#9ca3af">—</strong><small>No change</small></div>
+              </div>
+              <table class="rank-table">
+                <thead>
+                  <tr>
+                    <th>Keyword</th>
+                    <th>Position</th>
+                    <th>Change</th>
+                    <th>30-day</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>seo tools for startups</td>
+                    <td><span class="rank-pos pos-top">#1</span></td>
+                    <td><span class="rank-delta delta-up">↑ 12</span></td>
+                    <td>
+                      <svg class="rank-sparkline" viewBox="0 0 56 22" aria-hidden="true">
+                        <polyline points="0,18 8,15 16,16 24,11 32,9 40,6 48,3 56,1" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round"/>
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>best seo software 2024</td>
+                    <td><span class="rank-pos pos-top">#4</span></td>
+                    <td><span class="rank-delta delta-up">↑ 6</span></td>
+                    <td>
+                      <svg class="rank-sparkline" viewBox="0 0 56 22" aria-hidden="true">
+                        <polyline points="0,20 8,18 16,17 24,14 32,13 40,10 48,8 56,6" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round"/>
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>how to improve seo ranking</td>
+                    <td><span class="rank-pos pos-mid">#7</span></td>
+                    <td><span class="rank-delta delta-flat">— 0</span></td>
+                    <td>
+                      <svg class="rank-sparkline" viewBox="0 0 56 22" aria-hidden="true">
+                        <polyline points="0,12 8,13 16,11 24,12 32,11 40,12 48,11 56,11" fill="none" stroke="#9ca3af" stroke-width="2" stroke-linecap="round"/>
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>content gap analysis</td>
+                    <td><span class="rank-pos pos-top">#3</span></td>
+                    <td><span class="rank-delta delta-up">↑ 9</span></td>
+                    <td>
+                      <svg class="rank-sparkline" viewBox="0 0 56 22" aria-hidden="true">
+                        <polyline points="0,19 8,17 16,14 24,12 32,10 40,7 48,5 56,3" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round"/>
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>rank tracking software</td>
+                    <td><span class="rank-pos pos-mid">#11</span></td>
+                    <td><span class="rank-delta delta-down">↓ 3</span></td>
+                    <td>
+                      <svg class="rank-sparkline" viewBox="0 0 56 22" aria-hidden="true">
+                        <polyline points="0,8 8,9 16,10 24,11 32,12 40,14 48,15 56,16" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round"/>
+                      </svg>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ 4. Site Audit ══════════════════════════════════════════════════ -->
+    <section class="feat-section" id="site-audit" aria-labelledby="sa-heading">
+      <div class="container">
+        <div class="feat-layout reverse">
+
+          <!-- copy -->
+          <div class="feat-copy">
+            <div class="eyebrow"><span class="eyebrow-line"></span> Site Audit</div>
+            <h2 id="sa-heading">Fix what's holding <em>you back.</em></h2>
+            <p>Technical SEO issues silently kill your rankings. Rankly crawls your entire site, surfaces every problem — from broken links to slow LCP — and tells you exactly how to fix each one, prioritised by SEO impact so you never waste time on low-priority fixes.</p>
+            <ul class="feat-bullets">
+              <li>Full site crawl detecting 100+ technical SEO issue types</li>
+              <li>Core Web Vitals monitoring: LCP, FID/INP, and CLS</li>
+              <li>Crawl error reports with direct links to affected pages</li>
+              <li>Page speed analysis with actionable optimisation tips</li>
+            </ul>
+            <a class="button button-small" href="index.html#contact">Audit my site <span aria-hidden="true">↗</span></a>
+          </div>
+
+          <!-- mock UI -->
+          <div class="mock-ui" role="img" aria-label="Site audit score card showing health score, Core Web Vitals, and issue checklist">
+            <div class="mock-topbar">
+              <div class="mock-dots"><i></i><i></i><i></i></div>
+              <span class="mock-topbar-label">Site Audit — rankly.io</span>
+            </div>
+            <div class="mock-body">
+              <div class="audit-card">
+                <div class="audit-score-row">
+                  <div class="audit-donut" aria-hidden="true">
+                    <svg viewBox="0 0 80 80">
+                      <circle cx="40" cy="40" r="32" fill="none" stroke="#f0f0f0" stroke-width="8"/>
+                      <circle cx="40" cy="40" r="32" fill="none" stroke="#84c62f" stroke-width="8"
+                              stroke-dasharray="201" stroke-dashoffset="22" stroke-linecap="round"/>
+                    </svg>
+                    <div class="audit-donut-label">89</div>
+                  </div>
+                  <div class="audit-grade-info">
+                    <strong>Site Health Score</strong>
+                    <small>↑ 14 pts from last audit · Excellent</small>
+                  </div>
+                </div>
+                <div class="cwv-row">
+                  <div class="cwv-item">
+                    <span class="cwv-val cwv-good">1.8s</span>
+                    <span class="cwv-name">LCP</span>
+                  </div>
+                  <div class="cwv-item">
+                    <span class="cwv-val cwv-ok">0.12</span>
+                    <span class="cwv-name">CLS</span>
+                  </div>
+                  <div class="cwv-item">
+                    <span class="cwv-val cwv-good">62ms</span>
+                    <span class="cwv-name">INP</span>
+                  </div>
+                </div>
+                <div class="audit-checks">
+                  <div class="audit-check-row">
+                    <div class="audit-check-icon check-pass" aria-label="Passed">✓</div>
+                    <span>Meta descriptions on all pages</span>
+                    <small>312 pages</small>
+                  </div>
+                  <div class="audit-check-row">
+                    <div class="audit-check-icon check-pass" aria-label="Passed">✓</div>
+                    <span>Structured data (JSON-LD) present</span>
+                    <small>All key pages</small>
+                  </div>
+                  <div class="audit-check-row">
+                    <div class="audit-check-icon check-warn" aria-label="Warning">!</div>
+                    <span>Images missing alt text</span>
+                    <small>7 images</small>
+                  </div>
+                  <div class="audit-check-row">
+                    <div class="audit-check-icon check-fail" aria-label="Failed">✕</div>
+                    <span>Broken internal links</span>
+                    <small>3 pages</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ 5. Reporting ═══════════════════════════════════════════════════ -->
+    <section class="feat-section" id="reporting" aria-labelledby="rep-heading">
+      <div class="container">
+        <div class="feat-layout">
+
+          <!-- copy -->
+          <div class="feat-copy">
+            <div class="eyebrow"><span class="eyebrow-line"></span> Reporting</div>
+            <h2 id="rep-heading">Reports your team will <em>actually read.</em></h2>
+            <p>Gone are the days of manually compiling SEO spreadsheets. Rankly automatically delivers beautiful, branded reports every week — summarising what moved, what to do next, and why it matters — so your whole team stays aligned without a single meeting.</p>
+            <ul class="feat-bullets">
+              <li>Automated weekly performance reports via email or Slack</li>
+              <li>Custom dashboards with drag-and-drop widgets</li>
+              <li>One-click white-label PDF export for client sharing</li>
+              <li>Team access controls with viewer, editor, and admin roles</li>
+            </ul>
+            <a class="button button-small" href="index.html#contact">See reporting in action <span aria-hidden="true">↗</span></a>
+          </div>
+
+          <!-- mock UI -->
+          <div class="mock-ui" role="img" aria-label="Weekly SEO report card showing key metrics and team sharing controls">
+            <div class="mock-topbar">
+              <div class="mock-dots"><i></i><i></i><i></i></div>
+              <span class="mock-topbar-label">Weekly SEO Report</span>
+            </div>
+            <div class="mock-body">
+              <div class="report-card-inner">
+                <div class="report-header-row">
+                  <div>
+                    <strong>Sep 22 – Sep 28, 2026</strong>
+                    <small style="display:block;margin-top:.1rem">rankly.io · Sent to 4 team members</small>
+                  </div>
+                  <span class="report-badge">↑ Best week yet</span>
+                </div>
+                <div class="report-metrics">
+                  <div class="report-metric-box">
+                    <span class="rmb-label">Organic Traffic</span>
+                    <span class="rmb-val">84,392</span>
+                    <span class="rmb-delta rmb-up">↑ 28.4% vs last week</span>
+                  </div>
+                  <div class="report-metric-box">
+                    <span class="rmb-label">Top-10 Keywords</span>
+                    <span class="rmb-val">1,284</span>
+                    <span class="rmb-delta rmb-up">↑ 127 new</span>
+                  </div>
+                  <div class="report-metric-box">
+                    <span class="rmb-label">Site Health</span>
+                    <span class="rmb-val">89 / 100</span>
+                    <span class="rmb-delta rmb-up">↑ 14 pts</span>
+                  </div>
+                  <div class="report-metric-box">
+                    <span class="rmb-label">Backlinks Earned</span>
+                    <span class="rmb-val">+43</span>
+                    <span class="rmb-delta rmb-up">↑ 12 new domains</span>
+                  </div>
+                </div>
+                <div>
+                  <div style="font-size:.72rem;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.5rem;">Organic traffic — last 8 weeks</div>
+                  <div class="report-chart-bars" aria-hidden="true">
+                    <div class="rcb" style="height:35%"></div>
+                    <div class="rcb" style="height:42%"></div>
+                    <div class="rcb" style="height:50%"></div>
+                    <div class="rcb" style="height:47%"></div>
+                    <div class="rcb" style="height:62%"></div>
+                    <div class="rcb" style="height:71%"></div>
+                    <div class="rcb" style="height:82%"></div>
+                    <div class="rcb active" style="height:100%"></div>
+                  </div>
+                </div>
+                <div class="report-sharing-row">
+                  <span style="font-weight:600;color:#374151">Shared with</span>
+                  <div class="share-avatar" style="background:#6d28d9" aria-label="Team member EC">EC</div>
+                  <div class="share-avatar" style="background:#0891b2" aria-label="Team member JD">JD</div>
+                  <div class="share-avatar" style="background:#d97706" aria-label="Team member MR">MR</div>
+                  <span style="color:#9ca3af;font-size:.75rem">+1 more</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ 6. Competitor Analysis ══════════════════════════════════════════ -->
+    <section class="feat-section" id="competitor-analysis" aria-labelledby="ca-heading">
+      <div class="container">
+        <div class="feat-layout reverse">
+
+          <!-- copy -->
+          <div class="feat-copy">
+            <div class="eyebrow"><span class="eyebrow-line"></span> Competitor Analysis</div>
+            <h2 id="ca-heading">Know your rivals <em>inside out.</em></h2>
+            <p>Understanding your competition is the fastest shortcut to better rankings. Rankly lets you peek inside any competitor's SEO strategy — their top keywords, traffic estimates, backlink profile, and content gaps — so you can find the opportunities they're leaving on the table.</p>
+            <ul class="feat-bullets">
+              <li>Keyword gap analysis — discover terms competitors rank for that you don't</li>
+              <li>Backlink gap finder to uncover high-authority linking opportunities</li>
+              <li>Traffic share comparison across up to 5 competitors simultaneously</li>
+              <li>New competitor keyword alerts delivered to your inbox weekly</li>
+            </ul>
+            <a class="button button-small" href="index.html#contact">Spy on competitors <span aria-hidden="true">↗</span></a>
+          </div>
+
+          <!-- mock UI -->
+          <div class="mock-ui" role="img" aria-label="Competitor analysis table showing traffic share comparison and keyword gap data">
+            <div class="mock-topbar">
+              <div class="mock-dots"><i></i><i></i><i></i></div>
+              <span class="mock-topbar-label">Competitor Analysis</span>
+            </div>
+            <div class="mock-body">
+              <div class="comp-summary">
+                <div class="comp-stat"><strong style="color:#84c62f">18.4%</strong><small>Your traffic share</small></div>
+                <div class="comp-stat"><strong>342</strong><small>Keyword gaps found</small></div>
+                <div class="comp-stat"><strong>89</strong><small>Backlink gaps</small></div>
+                <div class="comp-stat"><strong>↑ 4.2%</strong><small>Share gained</small></div>
+              </div>
+              <table class="comp-table">
+                <thead>
+                  <tr>
+                    <th>Domain</th>
+                    <th>Traffic share</th>
+                    <th>Kw count</th>
+                    <th>Gap</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="comp-domain" style="color:#84c62f">rankly.io <small style="color:#16a34a;font-weight:600">(you)</small></span></td>
+                    <td>
+                      <div class="comp-traffic-bar">
+                        <div class="bar-track"><div class="bar-fill" style="width:52%"></div></div>
+                        <span style="font-size:.75rem;font-weight:600">18.4%</span>
+                      </div>
+                    </td>
+                    <td>4,120</td>
+                    <td>—</td>
+                  </tr>
+                  <tr>
+                    <td><span class="comp-domain">ahrefs.com</span></td>
+                    <td>
+                      <div class="comp-traffic-bar">
+                        <div class="bar-track"><div class="bar-fill comp-fill" style="width:100%"></div></div>
+                        <span style="font-size:.75rem;font-weight:600">35.1%</span>
+                      </div>
+                    </td>
+                    <td>18,400</td>
+                    <td><span class="comp-tag">+142 kw</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="comp-domain">semrush.com</span></td>
+                    <td>
+                      <div class="comp-traffic-bar">
+                        <div class="bar-track"><div class="bar-fill comp-fill" style="width:88%"></div></div>
+                        <span style="font-size:.75rem;font-weight:600">30.8%</span>
+                      </div>
+                    </td>
+                    <td>15,200</td>
+                    <td><span class="comp-tag">+98 kw</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="comp-domain">moz.com</span></td>
+                    <td>
+                      <div class="comp-traffic-bar">
+                        <div class="bar-track"><div class="bar-fill comp-fill" style="width:47%"></div></div>
+                        <span style="font-size:.75rem;font-weight:600">16.5%</span>
+                      </div>
+                    </td>
+                    <td>8,900</td>
+                    <td><span class="comp-tag">+56 kw</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="comp-domain">ubersuggest.com</span></td>
+                    <td>
+                      <div class="comp-traffic-bar">
+                        <div class="bar-track"><div class="bar-fill comp-fill" style="width:33%"></div></div>
+                        <span style="font-size:.75rem;font-weight:600">11.6%</span>
+                      </div>
+                    </td>
+                    <td>5,340</td>
+                    <td><span class="comp-tag">+46 kw</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ Benefits Strip ═════════════════════════════════════════════════ -->
+    <section class="benefits-strip" aria-labelledby="benefits-heading">
+      <div class="container">
+        <div class="section-intro centered" style="color:#fff;margin-bottom:3rem;">
+          <div class="eyebrow" style="color:rgba(255,255,255,.5);justify-content:center;"><span class="eyebrow-line" style="background:rgba(255,255,255,.2)"></span> Why teams choose Rankly</div>
+          <h2 id="benefits-heading" style="color:#fff">Built for teams that <em style="color:#b9f85c">move fast.</em></h2>
+        </div>
+        <div class="benefits-grid">
+          <div class="benefit-item">
+            <div class="benefit-icon" aria-hidden="true">⚡</div>
+            <span class="benefit-label">Setup in minutes,<br>not weeks</span>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon" aria-hidden="true">🔒</div>
+            <span class="benefit-label">Enterprise-grade<br>data security</span>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon" aria-hidden="true">🤖</div>
+            <span class="benefit-label">AI-powered<br>recommendations</span>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon" aria-hidden="true">📊</div>
+            <span class="benefit-label">Live data,<br>updated daily</span>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon" aria-hidden="true">🤝</div>
+            <span class="benefit-label">Unlimited team<br>members</span>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon" aria-hidden="true">💬</div>
+            <span class="benefit-label">Human support,<br>always available</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ Pricing CTA Banner ═════════════════════════════════════════════ -->
+    <section class="feat-cta" id="feat-pricing" aria-labelledby="cta-heading">
+      <div class="container">
+        <div class="feat-cta-inner">
+          <div class="eyebrow" style="justify-content:center;margin-bottom:1rem;"><span class="eyebrow-line"></span> Simple, honest pricing</div>
+          <h2 id="cta-heading">All six features.<br><em>One simple plan.</em></h2>
+          <p>No feature gating. No hidden limits. Every Rankly plan includes Keyword Research, Content Studio, Rank Tracking, Site Audit, Reporting, and Competitor Analysis — everything you need to own your niche in search.</p>
+          <div class="cta-plan-card">
+            <span class="cta-plan-badge">Growth Plan · Most popular</span>
+            <div class="cta-plan-price"><sup>$</sup>79<sub> / month</sub></div>
+            <div class="cta-plan-features">
+              <div class="cta-feat-item">Keyword Research</div>
+              <div class="cta-feat-item">Content Studio</div>
+              <div class="cta-feat-item">Daily Rank Tracking</div>
+              <div class="cta-feat-item">Full Site Audit</div>
+              <div class="cta-feat-item">Automated Reporting</div>
+              <div class="cta-feat-item">Competitor Analysis</div>
+              <div class="cta-feat-item">Unlimited projects</div>
+              <div class="cta-feat-item">Team sharing & roles</div>
+            </div>
+            <a class="button" href="index.html#contact">Start 14-day free trial <span aria-hidden="true">↗</span></a>
+            <p class="cta-fine">No credit card required · Cancel anytime · Free onboarding call</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══ Login Modal ══════════════════════════════════════════════════════ -->
+  <div class="modal" id="login" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="login-title">
+    <div class="modal-backdrop" data-close-login></div>
+    <section class="login-panel">
+      <button class="modal-close" type="button" aria-label="Close login" data-close-login>×</button>
+      <div class="login-brand"><span class="logo-mark"><span></span><span></span><span></span></span>rankly<span class="logo-period">.</span></div>
+      <div class="eyebrow"><span class="eyebrow-line"></span> Welcome back</div>
+      <h2 id="login-title">Log in to your<br><em>growth workspace.</em></h2>
+      <form class="login-form">
+        <label for="login-email">Work email</label>
+        <input id="login-email" type="email" placeholder="you@company.com" required>
+        <label for="login-password">Password</label>
+        <input id="login-password" type="password" placeholder="Enter your password" minlength="6" required>
+        <button class="button" type="submit">Log in <span>↗</span></button>
+        <small class="login-message" aria-live="polite"></small>
+      </form>
+      <p class="login-signup">New to Rankly? <a href="#register" data-switch-register>Start your free trial</a></p>
+    </section>
+  </div>
+
+  <!-- ══ Register Modal ════════════════════════════════════════════════════ -->
+  <div class="modal" id="register" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="register-title">
+    <div class="modal-backdrop" data-close-register></div>
+    <section class="login-panel">
+      <button class="modal-close" type="button" aria-label="Close registration" data-close-register>×</button>
+      <div class="login-brand"><span class="logo-mark"><span></span><span></span><span></span></span>rankly<span class="logo-period">.</span></div>
+      <div class="eyebrow"><span class="eyebrow-line"></span> Start growing</div>
+      <h2 id="register-title">Create your<br><em>free workspace.</em></h2>
+      <form class="register-form">
+        <label for="register-name">Full name</label>
+        <input id="register-name" type="text" placeholder="Alex Morgan" autocomplete="name" required>
+        <label for="register-email">Work email</label>
+        <input id="register-email" type="email" placeholder="you@company.com" autocomplete="email" required>
+        <label for="register-password">Create password</label>
+        <input id="register-password" type="password" placeholder="At least 6 characters" minlength="6" autocomplete="new-password" required>
+        <label for="register-confirm">Confirm password</label>
+        <input id="register-confirm" type="password" placeholder="Repeat your password" minlength="6" autocomplete="new-password" required>
+        <button class="button" type="submit">Create account <span>↗</span></button>
+        <small class="register-message" aria-live="polite"></small>
+      </form>
+      <p class="login-signup">Already have an account? <a href="#login" data-switch-login>Log in</a></p>
+    </section>
+  </div>
+
+  <!-- ══ Footer ════════════════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a class="logo" href="index.html">
+        <span class="logo-mark"><span></span><span></span><span></span></span>rankly<span class="logo-period">.</span>
+      </a>
+      <span>© 2026 Rankly, Inc.</span>
+      <div>
+        <a href="features.html">Features</a>
+        <a href="index.html#pricing">Pricing</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══ Scripts ═══════════════════════════════════════════════════════════ -->
+  <script src="script.js"></script>
+
+  <!-- ══ Feature tab active-state on scroll ════════════════════════════════ -->
+  <script>
+    (() => {
+      const tabs = document.querySelectorAll('.feat-tab');
+      const sections = ['keyword-research','content-studio','rank-tracking','site-audit','reporting','competitor-analysis']
+        .map(id => document.getElementById(id))
+        .filter(Boolean);
+
+      const tabMap = {};
+      tabs.forEach(t => { tabMap[t.getAttribute('href').replace('#','')] = t; });
+
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            tabs.forEach(t => t.classList.remove('active'));
+            const active = tabMap[entry.target.id];
+            if (active) active.classList.add('active');
+          }
+        });
+      }, { rootMargin: '-50% 0px -45% 0px' });
+
+      sections.forEach(s => io.observe(s));
+
+      /* Smooth-scroll tabs on click */
+      tabs.forEach(tab => {
+        tab.addEventListener('click', e => {
+          e.preventDefault();
+          const target = document.querySelector(tab.getAttribute('href'));
+          if (target) target.scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>

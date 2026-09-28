@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ═══════════════════════════════════════════════
+       PRIMARY META
+  ═══════════════════════════════════════════════ -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Expert SEO guides, case studies, and actionable strategies from the Rankly team. Learn how to grow organic traffic, improve rankings, and master technical SEO.">
+  <meta name="keywords" content="SEO blog, on-page SEO, technical SEO, keyword research, link building, content strategy, organic traffic, search engine optimization">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Rankly">
+  <link rel="canonical" href="https://rankly.io/blog">
+  <title>SEO Blog — Insights, Guides & Strategies | Rankly</title>
+
+  <!-- ═══════════════════════════════════════════════
+       OPEN GRAPH
+  ═══════════════════════════════════════════════ -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Rankly">
+  <meta property="og:title" content="SEO Blog — Insights, Guides & Strategies | Rankly">
+  <meta property="og:description" content="Expert SEO guides, case studies, and actionable strategies from the Rankly team. Learn how to grow organic traffic, improve rankings, and master technical SEO.">
+  <meta property="og:url" content="https://rankly.io/blog">
+  <meta property="og:image" content="https://rankly.io/assets/og-blog.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Rankly SEO Blog — Expert guides and strategies">
+  <meta property="og:locale" content="en_US">
+
+  <!-- ═══════════════════════════════════════════════
+       TWITTER CARD
+  ═══════════════════════════════════════════════ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@ranklyio">
+  <meta name="twitter:creator" content="@ranklyio">
+  <meta name="twitter:title" content="SEO Blog — Insights, Guides & Strategies | Rankly">
+  <meta name="twitter:description" content="Expert SEO guides, case studies, and actionable strategies from the Rankly team. Learn how to grow organic traffic, improve rankings, and master technical SEO.">
+  <meta name="twitter:image" content="https://rankly.io/assets/og-blog.png">
+  <meta name="twitter:image:alt" content="Rankly SEO Blog — Expert guides and strategies">
+
+  <!-- ═══════════════════════════════════════════════
+       THEME & PRECONNECT
+  ═══════════════════════════════════════════════ -->
+  <meta name="theme-color" content="#f8fafc">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- ═══════════════════════════════════════════════
+       STYLESHEETS
+  ═══════════════════════════════════════════════ -->
+  <link rel="stylesheet" href="./styles.css">
+
+  <!-- ═══════════════════════════════════════════════
+       SCHEMA.ORG JSON-LD
+  ═══════════════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://rankly.io/#website",
+        "url": "https://rankly.io",
+        "name": "Rankly",
+        "description": "Rankly helps ambitious teams turn search visibility into predictable growth with simple SEO workflows.",
+        "publisher": {
+          "@type": "Organization",
+          "@id": "https://rankly.io/#organization",
+          "name": "Rankly",
+          "url": "https://rankly.io",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://rankly.io/assets/logo.png"
+          },
+          "sameAs": [
+            "https://twitter.com/ranklyio",
+            "https://linkedin.com/company/ranklyio"
+          ]
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://rankly.io/blog?search={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "Blog",
+        "@id": "https://rankly.io/blog#blog",
+        "url": "https://rankly.io/blog",
+        "name": "SEO Insights & Strategies — Rankly Blog",
+        "description": "Expert guides, case studies, and actionable tips to grow your organic traffic.",
+        "publisher": {
+          "@id": "https://rankly.io/#organization"
+        },
+        "isPartOf": {
+          "@id": "https://rankly.io/#website"
+        },
+        "blogPost": [
+          {
+            "@type": "BlogPosting",
+            "headline": "How We Grew Organic Traffic 128% in 6 Months",
+            "url": "https://rankly.io/blog/organic-traffic-128-percent",
+            "datePublished": "2025-09-15",
+            "dateModified": "2025-09-15",
+            "author": { "@type": "Person", "name": "Emma Chen" },
+            "description": "A behind-the-scenes breakdown of the exact playbook we used to more than double organic traffic for a SaaS client in just six months.",
+            "keywords": ["organic traffic", "case study", "SEO growth"]
+          },
+          {
+            "@type": "BlogPosting",
+            "headline": "10 On-Page SEO Factors That Actually Matter in 2025",
+            "url": "https://rankly.io/blog/on-page-seo-factors-2025",
+            "datePublished": "2025-09-08",
+            "dateModified": "2025-09-08",
+            "author": { "@type": "Person", "name": "Marcus Rivera" },
+            "description": "Google's ranking signals have evolved. Here are the ten on-page factors you should actually be optimising for right now.",
+            "keywords": ["on-page SEO", "ranking factors", "2025"]
+          },
+          {
+            "@type": "BlogPosting",
+            "headline": "The Ultimate Guide to Keyword Research in 2025",
+            "url": "https://rankly.io/blog/keyword-research-guide-2025",
+            "datePublished": "2025-08-28",
+            "dateModified": "2025-08-28",
+            "author": { "@type": "Person", "name": "Priya Nair" },
+            "description": "Everything you need to find, evaluate, and prioritise keywords that drive real business results — from seed keywords to search intent.",
+            "keywords": ["keyword research", "search intent", "SEO strategy"]
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://rankly.io"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://rankly.io/blog"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- ═══════════════════════════════════════════════
+       BLOG PAGE STYLES (scoped additions)
+  ═══════════════════════════════════════════════ -->
+  <style>
+    /* ── Blog Layout ───────────────────────────── */
+    .blog-layout {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 3rem;
+      align-items: start;
+    }
+    @media (max-width: 960px) {
+      .blog-layout { grid-template-columns: 1fr; }
+    }
+
+    /* ── Blog Hero ─────────────────────────────── */
+    .blog-hero {
+      padding: 5rem 0 3.5rem;
+      text-align: center;
+    }
+    .blog-hero .eyebrow { justify-content: center; }
+    .blog-hero h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin: 0.75rem 0 1rem;
+      color: var(--fg, #0f172a);
+    }
+    .blog-hero h1 em {
+      font-style: normal;
+      color: var(--lime, #84c62f);
+    }
+    .blog-hero-sub {
+      font-size: 1.125rem;
+      color: var(--fg-muted, #64748b);
+      max-width: 540px;
+      margin: 0 auto 2rem;
+      line-height: 1.65;
+    }
+
+    /* ── Search bar ────────────────────────────── */
+    .blog-search {
+      display: flex;
+      gap: 0;
+      max-width: 480px;
+      margin: 0 auto;
+      border: 1.5px solid var(--border, #e2e8f0);
+      border-radius: 10px;
+      overflow: hidden;
+      background: var(--surface, #fff);
+      box-shadow: 0 2px 12px rgba(0,0,0,.06);
+      transition: box-shadow .2s;
+    }
+    .blog-search:focus-within {
+      box-shadow: 0 0 0 3px rgba(132,198,47,.25), 0 2px 12px rgba(0,0,0,.06);
+      border-color: var(--lime, #84c62f);
+    }
+    .blog-search input {
+      flex: 1;
+      border: none;
+      outline: none;
+      padding: 0.85rem 1.1rem;
+      font-family: inherit;
+      font-size: 0.95rem;
+      color: var(--fg, #0f172a);
+      background: transparent;
+    }
+    .blog-search input::placeholder { color: var(--fg-muted, #94a3b8); }
+    .blog-search button {
+      padding: 0 1.25rem;
+      background: var(--lime, #84c62f);
+      border: none;
+      cursor: pointer;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      transition: background .2s;
+    }
+    .blog-search button:hover { background: #76b028; }
+
+    /* ── Category Tabs ─────────────────────────── */
+    .category-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .cat-tab {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 600;
+      padding: 0.45rem 1rem;
+      border-radius: 100px;
+      border: 1.5px solid var(--border, #e2e8f0);
+      background: transparent;
+      color: var(--fg-muted, #64748b);
+      cursor: pointer;
+      transition: all .18s;
+      text-decoration: none;
+    }
+    .cat-tab:hover,
+    .cat-tab.active {
+      background: var(--lime, #84c62f);
+      border-color: var(--lime, #84c62f);
+      color: #0f2200;
+    }
+
+    /* ── Blog Grid ─────────────────────────────── */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.75rem;
+      margin-bottom: 2.5rem;
+    }
+
+    /* ── Post Card ─────────────────────────────── */
+    .post-card {
+      background: var(--surface, #fff);
+      border: 1.5px solid var(--border, #e2e8f0);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+    }
+    .post-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(0,0,0,.09);
+      border-color: var(--lime, #84c62f);
+    }
+
+    /* Card thumbnail strip */
+    .post-thumb {
+      height: 8px;
+      width: 100%;
+    }
+    .thumb-on-page   { background: linear-gradient(90deg, #84c62f, #b9f85c); }
+    .thumb-technical { background: linear-gradient(90deg, #818cf8, #a5b4fc); }
+    .thumb-content   { background: linear-gradient(90deg, #f59e0b, #fcd34d); }
+    .thumb-link      { background: linear-gradient(90deg, #f43f5e, #fb7185); }
+    .thumb-case      { background: linear-gradient(90deg, #06b6d4, #67e8f9); }
+
+    .post-body { padding: 1.4rem 1.4rem 1rem; flex: 1; }
+    .post-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 0.85rem;
+      flex-wrap: wrap;
+    }
+    .post-badge {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.65rem;
+      border-radius: 100px;
+    }
+    .badge-on-page   { background: #ecfccb; color: #365314; }
+    .badge-technical { background: #ede9fe; color: #3730a3; }
+    .badge-content   { background: #fef3c7; color: #78350f; }
+    .badge-link      { background: #ffe4e6; color: #9f1239; }
+    .badge-case      { background: #cffafe; color: #155e75; }
+
+    .post-read-time, .post-date {
+      font-size: 0.78rem;
+      color: var(--fg-muted, #94a3b8);
+    }
+    .post-dot { width: 3px; height: 3px; border-radius: 50%; background: var(--border, #cbd5e1); }
+
+    .post-card h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.35;
+      letter-spacing: -0.02em;
+      color: var(--fg, #0f172a);
+      margin: 0 0 0.65rem;
+    }
+    .post-excerpt {
+      font-size: 0.875rem;
+      line-height: 1.65;
+      color: var(--fg-muted, #64748b);
+      margin: 0;
+    }
+
+    .post-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.9rem 1.4rem 1.1rem;
+      border-top: 1px solid var(--border, #f1f5f9);
+      gap: 0.75rem;
+    }
+    .post-author {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+    }
+    .author-avatar {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #84c62f, #365314);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: #fff;
+      flex-shrink: 0;
+    }
+    .author-avatar.av-purple { background: linear-gradient(135deg, #818cf8, #3730a3); }
+    .author-avatar.av-amber  { background: linear-gradient(135deg, #f59e0b, #78350f); }
+    .author-avatar.av-rose   { background: linear-gradient(135deg, #f43f5e, #9f1239); }
+    .author-avatar.av-cyan   { background: linear-gradient(135deg, #06b6d4, #155e75); }
+
+    .author-name {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--fg, #0f172a);
+    }
+    .read-more {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--lime, #84c62f);
+      text-decoration: none;
+      white-space: nowrap;
+      transition: color .18s;
+    }
+    .read-more:hover { color: #5a8c1a; }
+
+    /* ── Pagination ────────────────────────────── */
+    .pagination {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      margin-bottom: 4rem;
+    }
+    .page-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 38px;
+      height: 38px;
+      padding: 0 0.6rem;
+      border-radius: 9px;
+      border: 1.5px solid var(--border, #e2e8f0);
+      background: var(--surface, #fff);
+      font-family: inherit;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--fg-muted, #64748b);
+      cursor: pointer;
+      text-decoration: none;
+      transition: all .18s;
+    }
+    .page-btn:hover { border-color: var(--lime, #84c62f); color: var(--fg, #0f172a); }
+    .page-btn.active {
+      background: var(--lime, #84c62f);
+      border-color: var(--lime, #84c62f);
+      color: #0f2200;
+    }
+    .page-btn.page-prev-next { padding: 0 0.9rem; gap: 0.35rem; }
+
+    /* ── Sidebar ───────────────────────────────── */
+    .blog-sidebar { display: flex; flex-direction: column; gap: 1.75rem; }
+
+    .sidebar-widget {
+      background: var(--surface, #fff);
+      border: 1.5px solid var(--border, #e2e8f0);
+      border-radius: 16px;
+      padding: 1.5rem;
+    }
+    .widget-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--fg, #0f172a);
+      margin: 0 0 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .widget-title span { color: var(--lime, #84c62f); }
+
+    /* Newsletter widget */
+    .newsletter-desc {
+      font-size: 0.875rem;
+      color: var(--fg-muted, #64748b);
+      line-height: 1.6;
+      margin: 0 0 1rem;
+    }
+    .newsletter-form { display: flex; flex-direction: column; gap: 0.6rem; }
+    .newsletter-form input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0.7rem 0.9rem;
+      border: 1.5px solid var(--border, #e2e8f0);
+      border-radius: 9px;
+      font-family: inherit;
+      font-size: 0.875rem;
+      color: var(--fg, #0f172a);
+      background: transparent;
+      outline: none;
+      transition: border-color .18s;
+    }
+    .newsletter-form input:focus { border-color: var(--lime, #84c62f); }
+    .newsletter-form button {
+      width: 100%;
+      padding: 0.72rem;
+      background: var(--lime, #84c62f);
+      border: none;
+      border-radius: 9px;
+      font-family: inherit;
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: #0f2200;
+      cursor: pointer;
+      transition: background .18s;
+    }
+    .newsletter-form button:hover { background: #76b028; }
+    .newsletter-note {
+      font-size: 0.73rem;
+      color: var(--fg-muted, #94a3b8);
+      text-align: center;
+    }
+
+    /* Popular posts widget */
+    .popular-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem; }
+    .popular-item { display: flex; gap: 0.75rem; align-items: flex-start; }
+    .popular-num {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--lime, #84c62f);
+      line-height: 1;
+      min-width: 1.5rem;
+      flex-shrink: 0;
+    }
+    .popular-info {}
+    .popular-title {
+      font-size: 0.845rem;
+      font-weight: 600;
+      color: var(--fg, #0f172a);
+      line-height: 1.4;
+      text-decoration: none;
+      display: block;
+      transition: color .18s;
+    }
+    .popular-title:hover { color: var(--lime, #84c62f); }
+    .popular-meta { font-size: 0.76rem; color: var(--fg-muted, #94a3b8); margin-top: 0.15rem; }
+
+    /* Tag cloud widget */
+    .tag-cloud { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+    .tag {
+      font-size: 0.775rem;
+      font-weight: 600;
+      padding: 0.3rem 0.75rem;
+      border-radius: 100px;
+      border: 1.5px solid var(--border, #e2e8f0);
+      color: var(--fg-muted, #64748b);
+      text-decoration: none;
+      transition: all .18s;
+    }
+    .tag:hover {
+      border-color: var(--lime, #84c62f);
+      color: var(--fg, #0f172a);
+      background: rgba(132,198,47,.08);
+    }
+
+    /* ── Utility ───────────────────────────────── */
+    .section-blog { padding: 0 0 2rem; }
+
+    /* Override container for blog page */
+    .blog-page-wrap { padding: 0 1.5rem; max-width: 1200px; margin: 0 auto; }
+
+    @media (max-width: 600px) {
+      .blog-grid { grid-template-columns: 1fr; }
+      .blog-hero { padding: 3.5rem 0 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════
+       ANNOUNCEMENT BAR
+  ═══════════════════════════════════════════════ -->
+  <div class="announcement">
+    <span class="announcement-dot"></span>
+    <span>Rankly 2.0 is here — see what's new</span>
+    <a href="./index.html#features">Explore features <span aria-hidden="true">↗</span></a>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════
+       HEADER / NAV  (identical to index.html)
+  ═══════════════════════════════════════════════ -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="logo" href="./index.html" aria-label="Rankly home">
+        <span class="logo-mark"><span></span><span></span><span></span></span>
+        rankly<span class="logo-period">.</span>
+      </a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">
+        <span></span><span></span>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="./index.html#features">Product</a>
+        <a href="./index.html#seo-checker">SEO tools</a>
+        <a href="./index.html#how-it-works">How it works</a>
+        <a href="./index.html#stories">Customers</a>
+        <a href="./index.html#pricing">Pricing</a>
+        <a class="nav-login" href="#login" data-auth-login>Log in</a>
+        <a class="button button-small" href="#register" data-auth-register>Start for free <span aria-hidden="true">↗</span></a>
+        <div class="user-menu" hidden>
+          <button class="user-button" type="button" aria-expanded="false" aria-controls="user-dropdown" aria-label="Open account menu">
+            <span class="user-avatar">U</span><span class="user-button-name">Account</span><span class="user-chevron">⌄</span>
+          </button>
+          <div class="user-dropdown" id="user-dropdown" hidden>
+            <div class="user-summary"><span class="user-avatar user-avatar-large">U</span><div><strong class="user-name">Account</strong><small class="user-email">email@example.com</small></div></div>
+            <a href="./index.html#contact">Request an audit</a>
+            <button type="button" data-logout>Log out <span>↗</span></button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ═══════════════════════════════════════════════
+       MAIN CONTENT
+  ═══════════════════════════════════════════════ -->
+  <main>
+
+    <!-- ── Blog Hero ─────────────────────────── -->
+    <section class="blog-hero" aria-labelledby="blog-hero-heading">
+      <div class="container">
+        <div class="eyebrow"><span class="eyebrow-line"></span> Rankly Blog</div>
+        <h1 id="blog-hero-heading">SEO Insights &amp; <em>Strategies</em></h1>
+        <p class="blog-hero-sub">Expert guides, case studies, and actionable tips to grow your organic traffic.</p>
+
+        <!-- Search -->
+        <div class="blog-search" role="search">
+          <label for="blog-search-input" class="sr-only">Search articles</label>
+          <input id="blog-search-input" type="search" placeholder="Search articles…" aria-label="Search articles">
+          <button type="button" aria-label="Submit search">
+            ⌕
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Blog Body ─────────────────────────── -->
+    <section class="section-blog">
+      <div class="blog-page-wrap">
+
+        <!-- Category filter tabs -->
+        <nav aria-label="Post categories">
+          <div class="category-tabs" role="tablist">
+            <a href="./blog.html" class="cat-tab active" role="tab" aria-selected="true">All</a>
+            <a href="./blog.html?cat=on-page-seo" class="cat-tab" role="tab" aria-selected="false">On-Page SEO</a>
+            <a href="./blog.html?cat=technical-seo" class="cat-tab" role="tab" aria-selected="false">Technical SEO</a>
+            <a href="./blog.html?cat=content-strategy" class="cat-tab" role="tab" aria-selected="false">Content Strategy</a>
+            <a href="./blog.html?cat=link-building" class="cat-tab" role="tab" aria-selected="false">Link Building</a>
+            <a href="./blog.html?cat=case-studies" class="cat-tab" role="tab" aria-selected="false">Case Studies</a>
+          </div>
+        </nav>
+
+        <!-- Two-column layout: posts + sidebar -->
+        <div class="blog-layout">
+
+          <!-- ── Post Grid ───────────────────── -->
+          <div>
+            <div class="blog-grid" aria-label="Blog posts">
+
+              <!-- Post 1 -->
+              <article class="post-card">
+                <div class="post-thumb thumb-case" aria-hidden="true"></div>
+                <div class="post-body">
+                  <div class="post-meta">
+                    <span class="post-badge badge-case">Case Study</span>
+                    <span class="post-dot" aria-hidden="true"></span>
+                    <span class="post-read-time">8 min read</span>
+                    <span class="post-dot" aria-hidden="true"></span>
+                    <time class="post-date" datetime="2025-09-15">Sep 15, 2025</time>
+                  </div>
+                  <h2>How We Grew Organic Traffic 128% in 6 Months</h2>
+                  <p class="post-excerpt">A behind-the-scenes breakdown of the exact playbook we used to more than double organic traffic for a SaaS client. We cover keyword clustering, content velocity, and the internal linking architecture that made it compound.</p>
+                </div>
+                <div class="post-footer">
+                  <div class="post-author">
+                    <div class="author-avatar av-cyan" aria-hidden="true">EC</div>
+                    <span class="author-name">Emma Chen</span>
+                  </div>
+                  <a href="./blog/organic-traffic-128-percent.html" class="read-more" aria-label="Read: How We Grew Organic Traffic 128% in 6 Months">Read more →</a>
+                </div>
+              </article>
+
+              <!-- Post 2 -->
+              <article class="post-card">
+                <div class="post-thumb thumb-on-page" aria-hidden="true"></div>
+                <div class="post-body">
+                  <div class="post-meta">
+                    <span class="post-badge badge-on-page">On-Page SEO</span>
+                    <span class="post-dot" aria-hidden="true"></span>
+                    <span class="post-read-time">6 min read</span>
+                    <span class="post-dot" aria-hidden="true"></span>
+                    <time class="post-date" datetime="2025-09-08">Sep 8, 2025</time>
+                  </div>
+                  <h2>10 On-Page SEO Factors That Actually Matter in 2025</h2>
+                  <p class="post-excerpt">Google's ranking signals have evolved significantly over the past two years. Here are the ten on-page factors you should actually be optimising for — and the outdated tactics you can finally drop.</p>
+                </div>
+                <div class="post-footer">
+                  <div class="post-author">
+                    <div class="author-avatar av-purple" aria-hidden="true">MR</div>
+                    <span class="author-name">Marcus Rivera</span>
+                  </div>
+                  <a href="./blog/on-page-seo-factors-2025.html" class="read-more" aria-label="Read: 10 On-Page SEO Factors That Actually Matter in 2025">Read more →</a>
+                </div>
+              </article>
+
+              <!-- Post 3 -->
+              <article class="post-card">
+                <div class="post-thumb thumb-content" aria-hidden="true"></div>
+                <div class="post-body">
+                  <div class="post-meta">
+                    <span class="post-badge badge-content">Content Strategy</span>
+                    <span class="post-dot" aria-hidden="true"></span>
+                    <span class="post-read-time">12 min read</span>
+                    <span class="post-dot" aria-hidden="true"></span>
+                    <time class="post-date" datetime="2025-08-28">Aug 28, 2025</time>
+                  </div>
+                  <h2>The Ultimate Guide to Keyword Research in 2025</h2>
+                  <p class="post-excerpt">Everything you need to find, evaluate, and prioritise keywords that drive real business results. From seed keyword generation to search intent mapping, this is the only keyword research framework you'll ever need.</p>
+                </div>
+                <div class="post-footer">
+                  <div class="post-author">
+                    <div class="author-avatar av-amber" aria-hidden="true">PN</div>
+                    <span class="author-name">Priya Nair</span>
+                  </div>
+                  <a href="./blog/keyword-research-guide-2025.html" class="read-more" aria-label="Read: The Ultimate Guide to Keyword Research in 2025">Read more →</a>
+                </div>
+              </article>
+
+              <!-- Post 4 -->
+              <article class="post-card">
+                <div class="post-thumb thumb-technical" aria-hidden="true"></div>
+                <div class="post-body">
+                  <div class="post-meta">
+                    <span class="post-badge badge-technical">Technical SEO</span>
+                    <span class="post-dot" aria-hidden="true"></span>
+                    <span class="post-read-time">10 min read</span>
+                    <span class="post-dot" aria-hidden="true"></span>
+                    <time class="post-date" datetime="2025-08-14">Aug 14, 2025</time>
+                  </div>
+                  <h2>Core Web Vitals in 2025: The Developer's Action Plan</h2>
+                  <p class="post-excerpt">LCP, INP, and CLS are no longer just developer concerns — they directly impact your rankings. This guide walks through the most impactful fixes for each metric with real before-and-after data from our client audits.</p>
+                </div>
+                <div class="post-footer">
+                  <div class="post-author">
+                    <div class="author-avatar" aria-hidden="true">JD</div>
+                    <span class="author-name">James Donovan</span>
+                  </div>
+                  <a href="./blog/core-web-vitals-2025.html" class="read-more" aria-label="Read: Core Web Vitals in 2025: The Developer's Action Plan">Read more →</a>
+                </div>
+              </article>
+
+              <!-- Post 5 -->
+              <article class="post-card">
+                <div class="post-thumb thumb-link" aria-hidden="true"></div>
+                <div class="post-body">
+                  <div class="post-meta">
+                    <span class="post-badge badge-link">Link Building</span>
+                    <span class="post-dot" aria-hidden="true"></span>
+                    <span class="post-read-time">7 min read</span>
+                    <span class="post-dot" aria-hidden="true"></span>
+                    <time class="post-date" datetime="2025-07-30">Jul 30, 2025</time>
+                  </div>
+                  <h2>7 Link-Building Strategies That Still Work (and 3 That Don't)</h2>
+                  <p class="post-excerpt">The link-building landscape has changed dramatically since the Helpful Content updates. We tested seven modern approaches across 40 client sites and ranked them by ROI, scalability, and risk — so you know exactly where to invest your effort.</p>
+                </div>
+                <div class="post-footer">
+                  <div class="post-author">
+                    <div class="author-avatar av-rose" aria-hidden="true">AK</div>
+                    <span class="author-name">Ava Kim</span>
+                  </div>
+                  <a href="./blog/link-building-strategies-2025.html" class="read-more" aria-label="Read: 7 Link-Building Strategies That Still Work">Read more →</a>
+                </div>
+              </article>
+
+              <!-- Post 6 -->
+              <article class="post-card">
+                <div class="post-thumb thumb-on-page" aria-hidden="true"></div>
+                <div class="post-body">
+                  <div class="post-meta">
+                    <span class="post-badge badge-on-page">On-Page SEO</span>
+                    <span class="post-dot" aria-hidden="true"></span>
+                    <span class="post-read-time">5 min read</span>
+                    <span class="post-dot" aria-hidden="true"></span>
+                    <time class="post-date" datetime="2025-07-18">Jul 18, 2025</time>
+                  </div>
+                  <h2>How to Write Title Tags &amp; Meta Descriptions That Get Clicked</h2>
+                  <p class="post-excerpt">Your title tag is the single most important piece of on-page copy you write. We analysed 10,000 SERPs to uncover the headline formulas that consistently outperform competitors on click-through rate — no clickbait required.</p>
+                </div>
+                <div class="post-footer">
+                  <div class="post-author">
+                    <div class="author-avatar av-purple" aria-hidden="true">MR</div>
+                    <span class="author-name">Marcus Rivera</span>
+                  </div>
+                  <a href="./blog/title-tags-meta-descriptions.html" class="read-more" aria-label="Read: How to Write Title Tags & Meta Descriptions That Get Clicked">Read more →</a>
+                </div>
+              </article>
+
+            </div><!-- /.blog-grid -->
+
+            <!-- ── Pagination ─────────────────── -->
+            <nav class="pagination" aria-label="Blog pagination">
+              <a href="./blog.html?page=0" class="page-btn page-prev-next" aria-label="Previous page" aria-disabled="true">← Prev</a>
+              <a href="./blog.html?page=1" class="page-btn active" aria-label="Page 1" aria-current="page">1</a>
+              <a href="./blog.html?page=2" class="page-btn" aria-label="Page 2">2</a>
+              <a href="./blog.html?page=3" class="page-btn" aria-label="Page 3">3</a>
+              <a href="./blog.html?page=2" class="page-btn page-prev-next" aria-label="Next page">Next →</a>
+            </nav>
+
+          </div><!-- /.blog-main-col -->
+
+          <!-- ── Sidebar ─────────────────────── -->
+          <aside class="blog-sidebar" aria-label="Blog sidebar">
+
+            <!-- Newsletter widget -->
+            <div class="sidebar-widget">
+              <h2 class="widget-title"><span>✉</span> Weekly SEO Digest</h2>
+              <p class="newsletter-desc">Get our best SEO tips, case studies, and strategy breakdowns straight to your inbox every Tuesday. No fluff, unsubscribe anytime.</p>
+              <form class="newsletter-form" novalidate aria-label="Newsletter signup">
+                <label for="newsletter-email" class="sr-only">Email address</label>
+                <input id="newsletter-email" type="email" placeholder="you@company.com" required autocomplete="email" aria-label="Email address">
+                <button type="submit">Subscribe — it's free ↗</button>
+                <p class="newsletter-note">Join 14,000+ SEO practitioners. No spam.</p>
+              </form>
+            </div>
+
+            <!-- Popular posts widget -->
+            <div class="sidebar-widget">
+              <h2 class="widget-title"><span>↑</span> Popular This Month</h2>
+              <ol class="popular-list" aria-label="Most popular posts">
+                <li class="popular-item">
+                  <span class="popular-num" aria-hidden="true">01</span>
+                  <div class="popular-info">
+                    <a href="./blog/keyword-research-guide-2025.html" class="popular-title">The Ultimate Guide to Keyword Research in 2025</a>
+                    <p class="popular-meta">12 min read · Content Strategy</p>
+                  </div>
+                </li>
+                <li class="popular-item">
+                  <span class="popular-num" aria-hidden="true">02</span>
+                  <div class="popular-info">
+                    <a href="./blog/organic-traffic-128-percent.html" class="popular-title">How We Grew Organic Traffic 128% in 6 Months</a>
+                    <p class="popular-meta">8 min read · Case Study</p>
+                  </div>
+                </li>
+                <li class="popular-item">
+                  <span class="popular-num" aria-hidden="true">03</span>
+                  <div class="popular-info">
+                    <a href="./blog/core-web-vitals-2025.html" class="popular-title">Core Web Vitals in 2025: The Developer's Action Plan</a>
+                    <p class="popular-meta">10 min read · Technical SEO</p>
+                  </div>
+                </li>
+                <li class="popular-item">
+                  <span class="popular-num" aria-hidden="true">04</span>
+                  <div class="popular-info">
+                    <a href="./blog/link-building-strategies-2025.html" class="popular-title">7 Link-Building Strategies That Still Work</a>
+                    <p class="popular-meta">7 min read · Link Building</p>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <!-- Tag cloud widget -->
+            <div class="sidebar-widget">
+              <h2 class="widget-title"><span>#</span> Browse by Topic</h2>
+              <div class="tag-cloud">
+                <a href="./blog.html?tag=keyword-research" class="tag">Keyword Research</a>
+                <a href="./blog.html?tag=on-page-seo" class="tag">On-Page SEO</a>
+                <a href="./blog.html?tag=technical-seo" class="tag">Technical SEO</a>
+                <a href="./blog.html?tag=content-strategy" class="tag">Content Strategy</a>
+                <a href="./blog.html?tag=link-building" class="tag">Link Building</a>
+                <a href="./blog.html?tag=core-web-vitals" class="tag">Core Web Vitals</a>
+                <a href="./blog.html?tag=serp-features" class="tag">SERP Features</a>
+                <a href="./blog.html?tag=local-seo" class="tag">Local SEO</a>
+                <a href="./blog.html?tag=google-updates" class="tag">Google Updates</a>
+                <a href="./blog.html?tag=e-e-a-t" class="tag">E-E-A-T</a>
+                <a href="./blog.html?tag=schema-markup" class="tag">Schema Markup</a>
+                <a href="./blog.html?tag=site-speed" class="tag">Site Speed</a>
+                <a href="./blog.html?tag=analytics" class="tag">Analytics</a>
+                <a href="./blog.html?tag=case-studies" class="tag">Case Studies</a>
+              </div>
+            </div>
+
+          </aside><!-- /.blog-sidebar -->
+
+        </div><!-- /.blog-layout -->
+      </div><!-- /.blog-page-wrap -->
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════
+       MODALS  (login / register — identical to index.html)
+  ═══════════════════════════════════════════════ -->
+  <div class="modal" id="login" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="login-title">
+    <div class="modal-backdrop" data-close-login></div>
+    <section class="login-panel">
+      <button class="modal-close" type="button" aria-label="Close login" data-close-login>×</button>
+      <div class="login-brand"><span class="logo-mark"><span></span><span></span><span></span></span>rankly<span class="logo-period">.</span></div>
+      <div class="eyebrow"><span class="eyebrow-line"></span> Welcome back</div>
+      <h2 id="login-title">Log in to your<br><em>growth workspace.</em></h2>
+      <form class="login-form">
+        <label for="login-email">Work email</label>
+        <input id="login-email" type="email" placeholder="you@company.com" required>
+        <label for="login-password">Password</label>
+        <input id="login-password" type="password" placeholder="Enter your password" minlength="6" required>
+        <button class="button" type="submit">Log in <span>↗</span></button>
+        <small class="login-message" aria-live="polite"></small>
+      </form>
+      <p class="login-signup">New to Rankly? <a href="#register" data-switch-register>Start your free trial</a></p>
+    </section>
+  </div>
+
+  <div class="modal" id="register" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="register-title">
+    <div class="modal-backdrop" data-close-register></div>
+    <section class="login-panel">
+      <button class="modal-close" type="button" aria-label="Close registration" data-close-register>×</button>
+      <div class="login-brand"><span class="logo-mark"><span></span><span></span><span></span></span>rankly<span class="logo-period">.</span></div>
+      <div class="eyebrow"><span class="eyebrow-line"></span> Start growing</div>
+      <h2 id="register-title">Create your<br><em>free workspace.</em></h2>
+      <form class="register-form">
+        <label for="register-name">Full name</label>
+        <input id="register-name" type="text" placeholder="Alex Morgan" autocomplete="name" required>
+        <label for="register-email">Work email</label>
+        <input id="register-email" type="email" placeholder="you@company.com" autocomplete="email" required>
+        <label for="register-password">Create password</label>
+        <input id="register-password" type="password" placeholder="At least 6 characters" minlength="6" autocomplete="new-password" required>
+        <label for="register-confirm">Confirm password</label>
+        <input id="register-confirm" type="password" placeholder="Repeat your password" minlength="6" autocomplete="new-password" required>
+        <button class="button" type="submit">Create account <span>↗</span></button>
+        <small class="register-message" aria-live="polite"></small>
+      </form>
+      <p class="login-signup">Already have an account? <a href="#login" data-switch-login>Log in</a></p>
+    </section>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════
+       FOOTER  (identical to index.html)
+  ═══════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a class="logo" href="./index.html">
+        <span class="logo-mark"><span></span><span></span><span></span></span>rankly<span class="logo-period">.</span>
+      </a>
+      <span>© 2025 Rankly, Inc.</span>
+      <div>
+        <a href="./index.html#features">Product</a>
+        <a href="./index.html#pricing">Pricing</a>
+        <a href="./index.html#faq">FAQ</a>
+        <a href="./index.html#contact">Contact</a>
+        <a href="./blog.html" aria-current="page">Blog</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════
+       SCRIPTS
+  ═══════════════════════════════════════════════ -->
+  <script src="./script.js"></script>
+
+  <!-- Blog-specific: category tab interaction & search -->
+  <script>
+    (function () {
+      'use strict';
+
+      /* ── Category tabs ───────────────────────── */
+      const tabs = document.querySelectorAll('.cat-tab');
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function (e) {
+          // Allow native navigation for real routing; just toggle aria for demo
+          tabs.forEach(function (t) {
+            t.classList.remove('active');
+            t.setAttribute('aria-selected', 'false');
+          });
+          tab.classList.add('active');
+          tab.setAttribute('aria-selected', 'true');
+        });
+      });
+
+      /* ── Newsletter form ─────────────────────── */
+      var newsletterForm = document.querySelector('.newsletter-form');
+      if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          var email = newsletterForm.querySelector('input[type="email"]').value.trim();
+          if (!email) return;
+          var btn = newsletterForm.querySelector('button');
+          btn.textContent = '✓ You\'re on the list!';
+          btn.disabled = true;
+          btn.style.background = '#16a34a';
+        });
+      }
+
+      /* ── Blog search ─────────────────────────── */
+      var searchInput = document.getElementById('blog-search-input');
+      var searchBtn   = document.querySelector('.blog-search button');
+      if (searchBtn && searchInput) {
+        searchBtn.addEventListener('click', function () {
+          var q = searchInput.value.trim();
+          if (q) window.location.href = './blog.html?search=' + encodeURIComponent(q);
+        });
+        searchInput.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter') searchBtn.click();
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
